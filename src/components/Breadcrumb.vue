@@ -95,6 +95,7 @@ export default {
         'Destinasi': 'Destinasi',
         'detailDestinasi': 'Detail Destinasi',
         'Blog': 'Blog',
+        'detailBlog': 'Detail Blog',
         'Kontak': 'Kontak'
       };
 
@@ -107,11 +108,18 @@ export default {
       // Add current route if not home
       if (route.name !== 'Beranda') {
         // Handle parent routes
-        if (route.name === 'detailDestinasi' || route.name === 'destinasiDetail') {
+        if (route.name === 'detailDestinasi') {
           // Add Destinasi as parent
           items.push({
             name: routeNameMap['Destinasi'] || 'Destinasi',
             path: '/destinasi'
+          });
+        }
+        else if (route.name === 'detailBlog') {
+          // Add Blog as parent
+          items.push({
+            name: routeNameMap['Blog'] || 'Blog',
+            path: '/post'
           });
         }
 
