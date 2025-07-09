@@ -1,44 +1,107 @@
-const posts = [
-    {
-      id: 1,
-      title: "Tips Berkunjung ke Pulau Komodo",
-      excerpt: "Panduan lengkap untuk berkunjung ke habitat asli komodo dengan aman dan nyaman.",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=300&fit=crop",
-      date: "2024-01-15",
-      content: "Pulau Komodo merupakan destinasi wisata yang wajib dikunjungi saat berada di NTT. Berikut tips untuk berkunjung ke pulau ini dengan aman dan nyaman..."
+export const posts = [
+  {
+    id: 1,
+    title: "Menjelajahi Keindahan Pulau Komodo",
+    slug: "menjelajahi-keindahan-pulau-komodo",
+    content:
+      "Pulau Komodo adalah rumah bagi komodo, hewan purba yang hanya ada di NTT. Selain itu, pemandangan alamnya sangat menakjubkan.",
+    category: {
+      name: "Destinasi Wisata",
+      slug: "destinasi-wisata",
     },
-    {
-      id: 2,
-      title: "Keindahan Danau Kelimutu di Ende",
-      excerpt: "Menyaksikan fenomena alam danau tiga warna yang menakjubkan di Flores.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop",
-      date: "2024-01-10",
-      content: "Danau Kelimutu adalah salah satu keajaiban alam yang paling terkenal di Indonesia. Danau ini memiliki tiga kawah dengan warna yang berbeda-beda..."
+    image: {
+      image: "destinasi/fulan-fehan.jpg",
     },
-    {
-      id: 3,
-      title: "Pesona Pantai Pink Lombok",
-      excerpt: "Mengunjungi pantai dengan pasir pink yang langka di Indonesia.",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=500&h=300&fit=crop",
-      date: "2024-01-05",
-      content: "Pantai Pink di Lombok adalah salah satu dari tujuh pantai pink di dunia. Keunikan pasir berwarna pink ini menjadi daya tarik utama..."
+    status: "published",
+    author: {
+      username: "admin",
+      full_name: "Admin"
     },
-    {
-      id: 4,
-      title: "Menjelajahi Budaya Sumba",
-      excerpt: "Mengenal tradisi dan budaya unik masyarakat Sumba yang masih terjaga.",
-      image: "https://images.unsplash.com/photo-1544552866-d3ed42536cfd?w=500&h=300&fit=crop",
-      date: "2024-01-01",
-      content: "Sumba tidak hanya terkenal dengan keindahan alamnya, tetapi juga budaya yang unik dan masih terjaga dengan baik..."
+    published_at: "2025-07-01",
+    views: 254,
+  },
+  {
+    id: 2,
+    title: "5 Tips Liburan Hemat di Labuan Bajo",
+    slug: "5-tips-liburan-hemat-di-labuan-bajo",
+    content:
+      "Dari memilih penginapan murah hingga transportasi lokal, artikel ini membahas cara hemat liburan ke Labuan Bajo.",
+    category: {
+      name: "Tips dan Trik",
+      slug: "tips-dan-trik",
     },
-    {
-      id: 5,
-      title: "Petualangan di Gua Rangko",
-      excerpt: "Pengalaman unik berenang di dalam gua dengan pemandangan yang menakjubkan.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop",
-      date: "2023-12-28",
-      content: "Gua Rangko menawarkan pengalaman berenang yang unik di dalam gua dengan air laut yang jernih..."
-    }
+    image: {
+      image: "destinasi/pantai-oetune.webp",
+    },
+    status: "published",
+    author: {
+      username: "nath.ady",
+      full_name: "Nathan"
+    },
+    published_at: "2025-06-25",
+    views: 145,
+  },
+  {
+    id: 3,
+    title: "Tradisi Pasola di Sumba",
+    slug: "tradisi-pasola-di-sumba",
+    content:
+      "Pasola adalah tradisi perang adat di Sumba yang menjadi daya tarik wisata budaya setiap tahunnya.",
+    category: {
+      name: "Budaya dan Tradisi",
+      slug: "budaya-dan-tradisi",
+    },
+    image: {
+      image: "destinasi/pantai-tablolong.webp",
+    },
+    status: "published",
+    author: {
+      username: "admin",
+      full_name: "Admin"
+    },
+    published_at: "2025-06-15",
+    views: 312,
+  },
+  {
+    id: 4,
+    title: "Festival Tenun Ikat di Kupang",
+    slug: "festival-tenun-ikat-di-kupang",
+    content:
+      "Festival yang memamerkan kerajinan tenun ikat khas NTT, sekaligus mengenalkan budaya lokal kepada wisatawan.",
+    category: {
+      name: "Event dan Festival",
+      slug: "event-dan-festival",
+    },
+    image: {
+      image: "destinasi/danau-kelimutu.jpg",
+    },
+    status: "published",
+    author: {
+      username: "beni07",
+      full_name: "beny"
+    },
+    published_at: "2025-07-02",
+    views: 180,
+  },
+  {
+    id: 5,
+    title: "Review Pantai Kolbano: Batu Warna-warni nan Eksotis",
+    slug: "review-pantai-kolbano",
+    content:
+      "Pantai Kolbano di Timor Selatan memiliki keunikan berupa batu-batu berwarna-warni yang indah dan jarang ditemukan di tempat lain.",
+    category: {
+      name: "Review Tempat Wisata",
+      slug: "review-tempat-wisata",
+    },
+    image: {
+      image: "destinasi/air-terjun-oenesu3.webp",
+    },
+    status: "published",
+    author: {
+      username: "nath.ady",
+      full_name: "Nathan"
+    },
+    published_at: "2025-06-30",
+    views: 198,
+  },
 ];
-
-export default posts;

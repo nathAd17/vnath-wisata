@@ -94,7 +94,7 @@
             </li>
             <li>
               <router-link 
-                to="/blog"
+                to="/post"
                 :class="{ 'text-primaryhover dark:text-primarylight': $route.path === '/blog' }"
                 class="hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light block py-2 px-3 capitalize transition-colors duration-200"
               >
@@ -136,7 +136,7 @@
               Destinasi
             </router-link>
             <router-link 
-              to="/blog"
+              to="/post"
               @click="closeMobileMenu"
               :class="{ 'text-primaryhover dark:text-primarylight bg-gray-100 dark:bg-gray-700': $route.path === '/blog' }"
               class="hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light block py-2 px-3 capitalize transition-colors duration-200 rounded-md"
