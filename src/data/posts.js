@@ -9,7 +9,7 @@ export const posts = [
       name: "Destinasi Wisata",
       slug: "destinasi-wisata",
     },
-    image: {
+    thumbnail: {
       image: "destinasi/fulan-fehan.jpg",
     },
     status: "published",
@@ -30,7 +30,7 @@ export const posts = [
       name: "Tips dan Trik",
       slug: "tips-dan-trik",
     },
-    image: {
+    thumbnail: {
       image: "destinasi/pantai-oetune.webp",
     },
     status: "published",
@@ -51,7 +51,7 @@ export const posts = [
       name: "Budaya dan Tradisi",
       slug: "budaya-dan-tradisi",
     },
-    image: {
+    thumbnail: {
       image: "destinasi/pantai-tablolong.webp",
     },
     status: "published",
@@ -72,7 +72,7 @@ export const posts = [
       name: "Event dan Festival",
       slug: "event-dan-festival",
     },
-    image: {
+    thumbnail: {
       image: "destinasi/danau-kelimutu.jpg",
     },
     status: "published",
@@ -93,7 +93,7 @@ export const posts = [
       name: "Review Tempat Wisata",
       slug: "review-tempat-wisata",
     },
-    image: {
+    thumbnail: {
       image: "destinasi/air-terjun-oenesu3.webp",
     },
     status: "published",

@@ -157,7 +157,7 @@
             <div v-for="post in paginatedDestinations" :key="post.id" class="destination-card">
                 <!-- post Card -->
                 <div class="hover:contrast-110 group relative flex h-[350px] w-full items-end justify-start rounded-3xl bg-cover bg-center text-left duration-300 ease-in-out hover:brightness-110 md:h-[400px]"
-                    :style="`background-image:url(src/assets/${post.image.image})`">
+                    :style="`background-image:url(src/assets/${post.thumbnail.image})`">
                     <div
                         class="absolute top-0 bottom-0 left-0 right-0 mt-20 rounded-3xl bg-gradient-to-b from-transparent to-gray-800/80">
                     </div>
@@ -290,7 +290,7 @@ export default {
             return this.filteredPosts.slice(start, end);
         },
         hasActiveFilters() {
-            return this.searchKeyword || this.selectedRegency || this.selectedCategory || this.selectedIsland;
+            return this.searchKeyword || this.selectedCategory;
         }
     },
     methods: {

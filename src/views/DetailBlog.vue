@@ -14,25 +14,48 @@
                     Destinasi Wisata
                     yang Memukau dan Kaya Budaya!"</p>
                 <div
-                    class="flex items-center justify-center max-w-xl gap-2 my-4 text-sm font-inter text-graydark dark:text-primarygray sm:mx-auto">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                        viewBox="0 0 24 24">
-                        <path fill-rule="evenodd"
-                            d="M5 5a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1 2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a2 2 0 0 1 2-2ZM3 19v-7a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm6.01-6a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm-10 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <a :href="`/post?author=${post.author.username}`"
-                        class="text-dark hover:underline dark:text-graylight">by {{ post.author.full_name }}</a>
-                    <span>- {{ formatDate(post.published_at) }}</span>
+                    class="flex items-center justify-center max-w-xl gap-4 my-4 text-sm font-inter text-graydark dark:text-primarygray sm:mx-auto">
+                    <div class="flex items-center gap-1">
+                        <svg class="w-6 h-6 text-grayhover dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                        <a :href="`/post?author=${post.author.username}`"
+                            class="text-dark hover:underline dark:text-graylight">by {{ post.author.full_name }}</a>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-6 h-6 text-grayhover dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M5 5a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1 2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a2 2 0 0 1 2-2ZM3 19v-7a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm6.01-6a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm-10 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span>{{ formatDate(post.published_at) }}</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-6 h-6 text-grayhover dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M4.998 7.78C6.729 6.345 9.198 5 12 5c2.802 0 5.27 1.345 7.002 2.78a12.713 12.713 0 0 1 2.096 2.183c.253.344.465.682.618.997.14.286.284.658.284 1.04s-.145.754-.284 1.04a6.6 6.6 0 0 1-.618.997 12.712 12.712 0 0 1-2.096 2.183C17.271 17.655 14.802 19 12 19c-2.802 0-5.27-1.345-7.002-2.78a12.712 12.712 0 0 1-2.096-2.183 6.6 6.6 0 0 1-.618-.997C2.144 12.754 2 12.382 2 12s.145-.754.284-1.04c.153-.315.365-.653.618-.997A12.714 12.714 0 0 1 4.998 7.78ZM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span>{{ post.views }}</span>
+
+                    </div>
                 </div>
             </header>
             <section class="flex flex-col gap-6 px-3 mx-auto md:flex-row">
                 <!-- {{-- section left --}} -->
-                <section v-if="post.image" class="relative container-detail md:w-3/4">
+                <section v-if="post.thumbnail" class="relative container-detail md:w-3/4">
                     <img id="elImg" class="mx-auto mb-6 h-56 w-full rounded-3xl object-cover sm:h-fit max-h-[25rem]"
-                        :alt="post.title" :src="`/src/assets/${post.image.image}`" />
-                    <button onclick="fullScreen()" type="button"
+                        :alt="post.title" :src="`/src/assets/${post.thumbnail.image}`" />
+                    <button @click="fullScreen()" type="button"
                         class="absolute p-2 text-sm font-medium text-center text-white duration-500 ease-in-out border rounded-full right-5 top-4 backdrop-blur-lg hover:scale-90 focus:outline-none focus:ring-4 focus:ring-blue-300"
                         aria-label="gambar">
                         <svg class="w-5 h-5 text-white md:h-7 md:w-7" aria-hidden="true"
@@ -69,7 +92,8 @@
                                 <li v-if="authorPosts.length === 0"
                                     class="flex flex-col items-center w-full gap-2 px-2 py-1 transition-all duration-300 ease-in-out cursor-pointer rounded-xl hover:scale-105 hover:bg-opacity-80 md:flex-row">
                                     <div class="basis-1/3 animate-pulse">
-                                       <img src="https://placehold.co/400x300?text=Tidak\nditemukan&font=roboto" alt="not found" class="rounded-md">
+                                        <img src="https://placehold.co/400x300?text=Tidak\nditemukan&font=roboto"
+                                            alt="not found" class="rounded-md">
                                     </div>
                                     <div class="basis-3/4">
                                         <h3 class="text-sm font-light text-dark dark:text-graylight"
@@ -102,12 +126,11 @@
                                             {{ formatDate(other.published_at) }}
                                         </span>
                                     </div>
-                                    <div
-                                        class="card-body my-2">
+                                    <div class="card-body my-2">
                                         <h3 class="text-lg font-medium text-primarydark dark:text-light">
                                             {{ other.title }}</h3>
-                                        <p class="font-light text-sm"> 
-                                        {{ truncateContent(other.content) }}
+                                        <p class="font-light text-sm">
+                                            {{ truncateContent(other.content) }}
                                         </p>
                                     </div>
                                     <div class="my-2 card-footer">
@@ -136,7 +159,8 @@
                             </ol>
                             <hr class="mt-3 border-graylight sm:mx-auto dark:border-gray-700" />
 
-                            <div v-if="authorPosts.length > 3" class="mx-auto hover:underline underline-offset-4 text-center cta">
+                            <div v-if="authorPosts.length > 3"
+                                class="mx-auto hover:underline underline-offset-4 text-center cta">
                                 <a href="/" class="text-base text-blue-400 font-medium">Selengkapnya</a>
                             </div>
                         </div>
@@ -161,7 +185,10 @@ export default {
         const authorPosts = ref([])
 
         const getPostDetail = () => {
+            // get parameter slug 
             const slug = route.params.slug
+
+            // cari data by slug
             const data = postsData.find((p) => p.slug === slug)
 
             if (!data) {
@@ -169,6 +196,7 @@ export default {
                 return
             }
 
+            //  filter by category
             const category = categoriesPost.find((c) => c.slug === data.category.slug)
 
             post.value = {
@@ -185,8 +213,8 @@ export default {
 
             // Filter posts berdasarkan author yang sama, exclude post yang sedang dibaca
             const otherPosts = postsData
-                .filter(p => 
-                    p.author.username === post.value.author.username && 
+                .filter(p =>
+                    p.author.username === post.value.author.username &&
                     p.slug !== post.value.slug
                 )
                 .map(p => {
@@ -210,7 +238,7 @@ export default {
             return textContent.length > 100 ? textContent.substring(0, 100) + '...' : textContent
         }
 
-
+        // full screen 
         const fullScreen = () => {
             const img = document.getElementById('elImg')
             if (img.requestFullscreen) {
@@ -236,6 +264,7 @@ export default {
         }
     },
     methods: {
+        // format tanggal
         formatDate(dateString) {
             const date = new Date(dateString);
             return new Intl.DateTimeFormat('id-ID', {
