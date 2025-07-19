@@ -90,7 +90,7 @@
                             <ol class="author-carousel *:!overflow-visible">
 
                                 <li v-if="authorPosts.length === 0"
-                                    class="flex flex-col items-center w-full gap-2 px-2 py-1 transition-all duration-300 ease-in-out cursor-pointer rounded-xl hover:scale-105 hover:bg-opacity-80 md:flex-row">
+                                    class="flex flex-col items-center w-64 md:w-full gap-2 px-2 py-1 transition-all duration-300 ease-in-out cursor-pointer rounded-xl hover:scale-105 hover:bg-opacity-80 md:flex-row">
                                     <div class="basis-1/3 animate-pulse">
                                         <img src="https://placehold.co/400x300?text=Tidak\nditemukan&font=roboto"
                                             alt="not found" class="rounded-md">
@@ -102,7 +102,7 @@
                                         </h3>
                                     </div>
                                 </li>
-                                <li v-for="other in authorPosts" :key="other.id" class="mb-4 ms-2 carousel-cell">
+                                <li v-for="other in authorPosts" :key="other.id" class="mb-4 ms-2 carousel-cell md:w-full max-w-64">
                                     <div class="flex justify-between mb-4 card-header">
                                         <span
                                             class="bg-emeraldmedium text-primarydark text-xs font-normal inline-flex items-center px-2.5 py-0.5 rounded">
@@ -143,9 +143,9 @@
                                                     {{ other.author.full_name }}
                                                 </span>
                                             </div>
-                                            <a :href="`post/${other.slug}`"
+                                            <a :href="`${other.slug}`"
                                                 class="inline-flex items-center text-sm font-medium dark:text-emeraldmedium text-primaryhover hover:underline">
-                                                Read More
+                                                Baca selengkapnya
                                                 <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd"
