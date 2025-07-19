@@ -134,7 +134,7 @@
                                         </p>
                                     </div>
                                     <div class="my-2 card-footer">
-                                        <div class="flex items-center justify-between">
+                                        <div class="flex items-center flex-wrap justify-between">
                                             <div class="flex items-center space-x-2">
                                                 <img class="rounded-full w-7 h-7"
                                                     :src="`https://ui-avatars.com/api/?name=${other.author.username}`"
@@ -168,6 +168,12 @@
                 </section>
             </section>
         </div>
+        <GoToTop 
+      :threshold="300"
+      variant="primary"
+      :show-progress="true"
+      position="bottom-right"
+    />
     </div>
 </template>
 
@@ -177,6 +183,7 @@ import { useRoute } from 'vue-router'
 import { posts as postsData } from '../data/posts.js'
 import { categoriesPost } from '../data/categoriesPost.js'
 import Breadcrumb from '../components/Breadcrumb.vue'
+import GoToTop from '../components/GoToTop.vue'
 
 export default {
     setup() {
@@ -276,6 +283,7 @@ export default {
     },
     components: {
         Breadcrumb,
+        GoToTop
     }
 }
 </script>

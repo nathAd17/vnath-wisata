@@ -275,6 +275,12 @@
                 </button>
             </div>
         </div>
+        <GoToTop 
+      :threshold="300"
+      variant="primary"
+      :show-progress="true"
+      position="bottom-right"
+    />
     </div>
 </template>
 
@@ -284,10 +290,12 @@ import { islands } from '../data/islands';
 import { categories } from '../data/categories';
 import { regencies } from '../data/regencies';
 import Breadcrumb from '../components/Breadcrumb.vue';
+import GoToTop from '../components/GoToTop.vue';
 
 export default {
     components: {
         Breadcrumb,
+        GoToTop
     },
     data() {
         return {

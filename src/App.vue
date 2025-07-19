@@ -8,6 +8,7 @@ export default {
     LoadingScreen,
     Navbar,
     Footer
+    
   },
   data() {
     return {

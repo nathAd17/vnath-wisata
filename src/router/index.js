@@ -6,6 +6,7 @@ import detailDestinasi from '../views/DetailDestinasi.vue'
 import detailBlog from '../views/DetailBlog.vue'
 import Blog from '../views/Blog.vue'
 import Kontak from '../views/Kontak.vue'
+import NotFoundPage from '../components/NotFoundPage.vue'
 
 const routes = [
   {
@@ -37,6 +38,11 @@ const routes = [
     path: '/kontak',
     name: 'Kontak',
     component: Kontak
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFoundPage
   }
 ]
 
