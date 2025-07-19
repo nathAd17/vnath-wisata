@@ -1,6 +1,6 @@
 <template>
     <div class="max-w-full mx-auto container-destination lg:max-w-screen-xl">
-        <div class="mb-8">
+        <div class="mb-8 mx-2 sm:mx-4">
             <Breadcrumb />
         </div>
         <!-- Header Section -->

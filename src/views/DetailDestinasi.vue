@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-screen max-w-screen-xl px-4 mx-auto">
-        <div class="mb-8">
+        <div class="mb-8 mx-2 sm:mx-4">
             <Breadcrumb />
         </div>
         <!-- <nav class="flex" aria-label="Breadcrumb">
