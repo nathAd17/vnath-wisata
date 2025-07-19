@@ -78,7 +78,7 @@
               <router-link 
                 to="/"
                 :class="{ 'text-primaryhover dark:text-primarylight': $route.path === '/' }"
-                class="hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light block py-2 px-3 capitalize transition-colors duration-200"
+                class="block px-3 py-2 capitalize transition-colors duration-200 hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light"
               >
                 Beranda
               </router-link>
@@ -87,7 +87,7 @@
               <router-link 
                 to="/destinasi"
                 :class="{ 'text-primaryhover dark:text-primarylight': $route.path.includes('/destinasi') }"
-                class="hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light block py-2 px-3 capitalize transition-colors duration-200"
+                class="block px-3 py-2 capitalize transition-colors duration-200 hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light"
               >
                 Destinasi
               </router-link>
@@ -95,8 +95,8 @@
             <li>
               <router-link 
                 to="/post"
-                :class="{ 'text-primaryhover dark:text-primarylight': $route.path === '/blog' }"
-                class="hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light block py-2 px-3 capitalize transition-colors duration-200"
+                :class="{ 'text-primaryhover dark:text-primarylight': $route.path === '/post' }"
+                class="block px-3 py-2 capitalize transition-colors duration-200 hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light"
               >
                 Blog
               </router-link>
@@ -105,7 +105,7 @@
               <router-link 
                 to="/kontak"
                 :class="{ 'text-primaryhover dark:text-primarylight': $route.path === '/kontak' }"
-                class="hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light block py-2 px-3 capitalize transition-colors duration-200"
+                class="block px-3 py-2 capitalize transition-colors duration-200 hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light"
               >
                 Kontak
               </router-link>
@@ -118,12 +118,12 @@
           class="w-full md:hidden"
           :class="{ 'block': isMobileMenuOpen, 'hidden': !isMobileMenuOpen }"
         >
-          <div class="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg mt-4">
+          <div class="px-2 pt-2 pb-3 mt-4 space-y-1 bg-white rounded-lg shadow-lg dark:bg-gray-800">
             <router-link 
               to="/"
               @click="closeMobileMenu"
               :class="{ 'text-primaryhover dark:text-primarylight bg-gray-100 dark:bg-gray-700': $route.path === '/' }"
-              class="hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light block py-2 px-3 capitalize transition-colors duration-200 rounded-md"
+              class="block px-3 py-2 capitalize transition-colors duration-200 rounded-md hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light"
             >
               Beranda
             </router-link>
@@ -131,15 +131,15 @@
               to="/destinasi"
               @click="closeMobileMenu"
               :class="{ 'text-primaryhover dark:text-primarylight bg-gray-100 dark:bg-gray-700': $route.path.includes('/destinasi') }"
-              class="hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light block py-2 px-3 capitalize transition-colors duration-200 rounded-md"
+              class="block px-3 py-2 capitalize transition-colors duration-200 rounded-md hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light"
             >
               Destinasi
             </router-link>
             <router-link 
               to="/post"
               @click="closeMobileMenu"
-              :class="{ 'text-primaryhover dark:text-primarylight bg-gray-100 dark:bg-gray-700': $route.path === '/blog' }"
-              class="hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light block py-2 px-3 capitalize transition-colors duration-200 rounded-md"
+              :class="{ 'text-primaryhover dark:text-primarylight bg-gray-100 dark:bg-gray-700': $route.path === '/post' }"
+              class="block px-3 py-2 capitalize transition-colors duration-200 rounded-md hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light"
             >
               Blog
             </router-link>
@@ -147,7 +147,7 @@
               to="/kontak"
               @click="closeMobileMenu"
               :class="{ 'text-primaryhover dark:text-primarylight bg-gray-100 dark:bg-gray-700': $route.path === '/kontak' }"
-              class="hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light block py-2 px-3 capitalize transition-colors duration-200 rounded-md"
+              class="block px-3 py-2 capitalize transition-colors duration-200 rounded-md hover:text-primaryhover dark:hover:text-primarylight text-dark dark:text-light"
             >
               Kontak
             </router-link>

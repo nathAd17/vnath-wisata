@@ -15,7 +15,7 @@ export default {
       colors: {
         emeraldlight: "#ecfdf5", // emerald-50
         emeraldmedium: "#a7f3d0", // emerald-300
-        primary: "#05775E", // emerald-600
+        primary: "#059669", // emerald-600
         primaryhover: "#07735b", // emerald-700
         primarydark: "#013A33", // emerald-900
         primarylight: "#6ee7b7", // emerald-300

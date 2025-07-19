@@ -10,7 +10,7 @@
         <template v-if="index === 0">
           <router-link
             :to="item.path"
-            class="inline-flex items-center text-xs md:text-sm font-semibold text-gray-700 hover:text-primaryhover dark:text-primarygray dark:hover:text-primary"
+            class="inline-flex items-center text-xs font-semibold text-gray-700 md:text-sm hover:text-primaryhover dark:text-primarygray dark:hover:text-primary"
           >
             <svg 
               class="me-2.5 h-3 w-3" 
@@ -48,7 +48,7 @@
             <router-link
               v-if="index < breadcrumbItems.length - 1"
               :to="item.path"
-              class="text-xs md:text-sm font-medium ms-1 text-gray-700 hover:text-primaryhover dark:text-primarygray dark:hover:text-primary md:ms-2"
+              class="text-xs font-medium text-gray-700 md:text-sm ms-1 hover:text-primaryhover dark:text-primarygray dark:hover:text-primary md:ms-2"
             >
               {{ item.name }}
             </router-link>
@@ -56,7 +56,7 @@
             <!-- Last item (current page) -->
             <span 
               v-else
-              class="text-xs md:text-sm font-medium ms-1 text-grayhover dark:text-primarygray md:ms-2"
+              class="text-xs font-medium md:text-sm ms-1 text-grayhover dark:text-primarygray md:ms-2"
               :aria-current="index === breadcrumbItems.length - 1 ? 'page' : undefined"
             >
               {{ item.name }}

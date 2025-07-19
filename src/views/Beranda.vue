@@ -4,15 +4,21 @@
       @go-to-detail="handleGoToDetail"
     /> -->
     <CarouselHome />
+    <About />
+    <LatestPost />
   </div>
 </template>
 <script>
 // import HomeCarousel from '../components/HomeCarousel.vue';
 import CarouselHome from '../components/CarouselHome.vue';
+import LatestPost from '../components/LatestPost.vue';
+import About from '../components/About.vue';
 export default {
     components: {
         // HomeCarousel,
-        CarouselHome
+        CarouselHome,
+        LatestPost,
+        About
     },
     methods: {
         handleGoToDetail(slug) {

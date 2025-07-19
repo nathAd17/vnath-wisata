@@ -11,6 +11,7 @@ export const posts = [
     },
     thumbnail: {
       image: "destinasi/fulan-fehan.jpg",
+      alt: "fulan-fehan"
     },
     status: "published",
     author: {
@@ -32,6 +33,7 @@ export const posts = [
     },
     thumbnail: {
       image: "destinasi/pantai-oetune.webp",
+      alt: "pantai-oetune"
     },
     status: "published",
     author: {
@@ -53,6 +55,7 @@ export const posts = [
     },
     thumbnail: {
       image: "destinasi/pantai-tablolong.webp",
+      alt: "pantai-tablolong"
     },
     status: "published",
     author: {
@@ -74,6 +77,7 @@ export const posts = [
     },
     thumbnail: {
       image: "destinasi/danau-kelimutu.jpg",
+      alt: "danau-kelimutu"
     },
     status: "published",
     author: {
@@ -95,6 +99,7 @@ export const posts = [
     },
     thumbnail: {
       image: "destinasi/air-terjun-oenesu3.webp",
+      alt: "air-terjun-oenesu"
     },
     status: "published",
     author: {

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    id="svg3825"
+    sodipodi:docname="sun-outline.svg"
+    viewBox="0 0 744.09 1052.4"
+    version="1.1"
+    inkscape:version="0.47 r22583"
+  >
+  <sodipodi:namedview
+      id="base"
+      bordercolor="#666666"
+      inkscape:pageshadow="2"
+      inkscape:window-y="25"
+      pagecolor="#ffffff"
+      inkscape:window-height="699"
+      inkscape:window-maximized="0"
+      inkscape:zoom="0.35"
+      inkscape:window-x="25"
+      showgrid="false"
+      borderopacity="1.0"
+      inkscape:current-layer="layer1"
+      inkscape:cx="375"
+      inkscape:cy="520"
+      inkscape:window-width="783"
+      inkscape:pageopacity="0.0"
+      inkscape:document-units="px"
+  />
+  <g
+      id="layer1"
+      inkscape:label="Layer 1"
+      inkscape:groupmode="layer"
+    >
+    <path
+        id="path5006"
+        style="color:#000000;stroke:#000000;stroke-miterlimit:2.6;stroke-width:2.9023;fill:#ffffff"
+        sodipodi:type="star"
+        sodipodi:sides="9"
+        sodipodi:r1="57.019234"
+        sodipodi:r2="32.818508"
+        transform="matrix(3.9622 0 0 3.9622 -807.01 15.994)"
+        sodipodi:arg2="1.144773"
+        sodipodi:arg1="0.79570711"
+        inkscape:randomized="-0.092"
+        sodipodi:cy="88.090233"
+        sodipodi:cx="275.15002"
+        inkscape:rounded="0.1"
+        inkscape:flatsided="false"
+        d="m310.66 132.06c-1.827 2.0443-22.21-18.383-24.893-17.378s-6.7378 33.642-9.5753 34.012c-2.8374 0.36973-7.7155-33.089-10.481-33.888-2.7654-0.79903-18.779 19.342-21.18 17.829-2.4003-1.5126 5.6997-26.098 4.3649-28.671-1.3349-2.5725-31.863-3.7803-32.492-6.6501-0.62876-2.8698 27.669-10.399 27.902-13.242 0.23394-2.8424-18.998-18.902-17.897-21.394 1.1013-2.4916 26.855 8.1774 28.594 5.9916 1.7397-2.1858-3.3918-29.683-0.75169-30.507 2.6401-0.82361 18.503 18.485 21.322 18.393 2.8185-0.09235 11.303-24.288 14.183-23.722 2.8795 0.56537 1.4433 25.668 3.6723 27.344s24.272-6.2829 25.907-4.0049c1.6351 2.2779-12.639 24.445-11.78 27.073 0.85968 2.6279 27.012 5.1355 26.655 7.8525-0.35726 2.717-32.699 3.8756-34.047 6.5072-1.3477 2.6316 12.324 32.411 10.497 34.455z"
+    />
+    <path
+        id="path5008"
+        sodipodi:rx="39.900909"
+        sodipodi:ry="37.407101"
+        style="color:#000000;stroke:#000000;stroke-miterlimit:2.6;stroke-width:3.1304;fill:#ffffff"
+        sodipodi:type="arc"
+        d="m194.52 77.284a39.901 37.407 0 1 1 -79.802 0 39.901 37.407 0 1 1 79.802 0z"
+        transform="matrix(3.8829 0 0 3.4755 -318.8 84.896)"
+        sodipodi:cy="77.283737"
+        sodipodi:cx="154.61601"
+    />
+    <path
+        id="path9498"
+        style="stroke-linejoin:round;color:#000000;stroke:#000000;stroke-linecap:round;stroke-miterlimit:2.6;stroke-width:1.875;fill:#ffffff"
+        sodipodi:type="inkscape:offset"
+        d="m110.53 144.97c-9.7653 0-18.147 5.0642-22.25 12.375-1.6386-0.91483-3.4461-1.4688-5.375-1.4688-5.8332 0-10.687 4.6925-12.188 11.062-2.5608-1.0122-5.5383-1.625-8.7188-1.625-9.5414 0-17.281 5.2205-17.281 11.656-0.000001 5.8094 6.3477 10.585 14.594 11.469-0.36958 0.62706-0.65625 1.248-0.65625 1.9062-0.000002 6.1619 16.882 11.188 37.688 11.188s37.688-5.0256 37.688-11.188c0-0.41459-0.25732-0.78459-0.40625-1.1875 0.91129 0.22662 1.8136 0.46875 2.8125 0.46875 5.5658 0.00001 10.094-3.7818 10.094-8.4375s-4.5279-8.4375-10.094-8.4375c-0.68208 0-1.2621 0.2356-1.9062 0.34375 0.56329-1.8616 0.9375-3.7611 0.9375-5.7812 0-12.324-11.155-22.344-24.938-22.344z"
+        inkscape:original="M 110.53125 144.96875 C 100.76599 144.96875 92.384060 150.03292 88.281250 157.34375 C 86.642607 156.42892 84.835190 155.87500 82.906250 155.87500 C 77.073071 155.87500 72.219030 160.56753 70.718750 166.93750 C 68.157973 165.92533 65.180470 165.31250 62.000000 165.31250 C 52.458571 165.31250 44.718750 170.53296 44.718750 176.96875 C 44.718749 182.77816 51.066430 187.55402 59.312500 188.43750 C 58.942922 189.06456 58.656250 189.68551 58.656250 190.34375 C 58.656248 196.50568 75.538140 201.53125 96.343750 201.53125 C 117.14936 201.53125 134.03126 196.50568 134.03125 190.34375 C 134.03125 189.92916 133.77393 189.55916 133.62500 189.15625 C 134.53629 189.38287 135.43860 189.62500 136.43750 189.62500 C 142.00333 189.62501 146.53125 185.84318 146.53125 181.18750 C 146.53125 176.53182 142.00332 172.75000 136.43750 172.75000 C 135.75542 172.75000 135.17544 172.98560 134.53125 173.09375 C 135.09454 171.23218 135.46875 169.33268 135.46875 167.31250 C 135.46875 154.98864 124.31330 144.96875 110.53125 144.96875 z "
+        transform="matrix(6.1331 0 0 6.1331 -206.24 -603.05)"
+        inkscape:radius="0"
+    />
+  </g
+  >
+  <metadata
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+        <dc:title
+          >Cloudy - Outline</dc:title
+        >
+        <dc:date
+          >2010-07-01T20:11:08</dc:date
+        >
+        <dc:description
+        />
+        <dc:source
+          >https://openclipart.org/detail/69661/cloudy---outline-by-horse50</dc:source
+        >
+        <dc:creator
+          >
+          <cc:Agent
+            >
+            <dc:title
+              >horse50</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:creator
+        >
+        <dc:subject
+          >
+          <rdf:Bag
+            >
+            <rdf:li
+              >Cloudy</rdf:li
+            >
+            <rdf:li
+              >black and white</rdf:li
+            >
+            <rdf:li
+              >coloring book</rdf:li
+            >
+            <rdf:li
+              >line art</rdf:li
+            >
+            <rdf:li
+              >outline</rdf:li
+            >
+          </rdf:Bag
+          >
+        </dc:subject
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>
