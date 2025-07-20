@@ -70,7 +70,6 @@
 
 <script>
 export default {
-  name: 'BreadcrumbComponent',
   props: {
     // Optional prop to override automatic breadcrumb generation
     customItems: {
@@ -96,6 +95,7 @@ export default {
         'detailDestinasi': 'Detail Destinasi',
         'Blog': 'Blog',
         'detailBlog': 'Detail Blog',
+        'authorPost': 'Penulis Blog',
         'Kontak': 'Kontak'
       };
 
@@ -122,6 +122,13 @@ export default {
             path: '/post'
           });
         }
+        else if (route.name === 'authorPost') {
+          // Add Blog as parent
+          items.push({
+            name: routeNameMap['Blog'] || 'Blog',
+            path: '/post'
+          });
+        }
 
         // Add current route
         items.push({
@@ -135,7 +142,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-/* Add any custom styles here if needed */
-</style>

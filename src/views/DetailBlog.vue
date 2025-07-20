@@ -24,7 +24,7 @@
                                 clip-rule="evenodd" />
                         </svg>
 
-                        <a :href="`/post?author=${post.author.username}`"
+                        <a :href="`/post/author/${post.author.username}`"
                             class="text-dark hover:underline dark:text-graylight">by {{ post.author.full_name }}</a>
                     </div>
                     <div class="flex items-center gap-1">
@@ -138,7 +138,7 @@
                                             <div class="flex items-center space-x-2">
                                                 <img class="rounded-full w-7 h-7"
                                                     :src="`https://ui-avatars.com/api/?name=${other.author.username}`"
-                                                    alt="Jese Leos avatar" />
+                                                    alt="avatar-user" />
                                                 <span class="text-sm font-medium text-primarydark dark:text-white">
                                                     {{ other.author.full_name }}
                                                 </span>
@@ -232,7 +232,7 @@ export default {
                         category: category || { name: 'Tidak Diketahui' }
                     }
                 })
-                .sort((a, b) => new Date(b.published_at) - new Date(a.published_at)) // Urutkan berdasarkan tanggal terbaru
+                .sort((a, b) => new Date(b.published_at) - new Date(a.published_at)) // Urutkan berdasarkan tanggal
                 .slice(0, 5) // Ambil maksimal 5 post
 
             authorPosts.value = otherPosts
@@ -277,6 +277,12 @@ export default {
             return new Intl.DateTimeFormat('id-ID', {
                 day: '2-digit',
                 month: 'short',
+                year: 'numeric'
+            }).format(date);
+        },
+        formatYear(dateString) {
+            const date = new Date(dateString);
+            return new Intl.DateTimeFormat('id-ID', {
                 year: 'numeric'
             }).format(date);
         }

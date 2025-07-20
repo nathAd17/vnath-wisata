@@ -4,6 +4,7 @@ import Beranda from '../views/Beranda.vue'
 import Destinasi from '../views/Destinasi.vue'
 import detailDestinasi from '../views/DetailDestinasi.vue'
 import detailBlog from '../views/DetailBlog.vue'
+import authorPost from '../views/AuthorPost.vue'
 import Blog from '../views/Blog.vue'
 import Kontak from '../views/Kontak.vue'
 import NotFoundPage from '../components/NotFoundPage.vue'
@@ -25,14 +26,19 @@ const routes = [
     component: detailDestinasi
   },
   {
+    path: '/post',
+    name: 'Blog',
+    component: Blog
+  },
+  {
     path: '/post/:slug',
     name: 'detailBlog',
     component: detailBlog
   },
   {
-    path: '/post',
-    name: 'Blog',
-    component: Blog
+    path: '/post/author/:username',
+    name: 'authorPost',
+    component: authorPost
   },
   {
     path: '/kontak',

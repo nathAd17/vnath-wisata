@@ -4,32 +4,33 @@
             <Breadcrumb />
         </div>
         <!-- Header Section -->
-       <div class="max-w-xl mx-auto mb-10 text-center md:mb-6 lg:max-w-2xl">
-        <div>
-            <h2
-                class="inline-block p-2 mb-4 text-xs font-bold tracking-wider text-center uppercase rounded-full bg-primary font-poppins text-light" role="heading" aria-level="2">
-                PESONA FLOBAMORA
+        <div class="max-w-xl mx-auto mb-10 text-center md:mb-6 lg:max-w-2xl">
+            <div>
+                <h2 class="inline-block p-2 mb-4 text-xs font-bold tracking-wider text-center uppercase rounded-full bg-primary font-poppins text-light"
+                    role="heading" aria-level="2">
+                    PESONA FLOBAMORA
+                </h2>
+            </div>
+            <h2 class="max-w-lg mb-2 text-3xl font-bold leading-none tracking-tight font-poppins text-dark dark:text-light sm:text-4xl md:mx-auto"
+                role="heading" aria-level="1">
+                <span class="relative inline-block">
+                    <svg viewBox="0 0 52 24" fill="currentColor"
+                        class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-light_gray sm:block lg:-ml-28 lg:-mt-10 lg:w-32">
+                        <defs>
+                            <pattern id="7b568941-9ed0-4f49-85a0-5e21ca6c7ad6" x="0" y="0" width=".135" height=".30">
+                                <circle cx="1" cy="1" r=".7"></circle>
+                            </pattern>
+                        </defs>
+                        <rect fill="url(#7b568941-9ed0-4f49-85a0-5e21ca6c7ad6)" width="52" height="24"></rect>
+                    </svg>
+                    <span class="relative">"Jelajahi </span>
+                </span> surga tersembunyi di
+                Nusa Tenggara Timur!"
             </h2>
+            <p class="text-base font-normal font-inter text-graydark dark:text-graylight md:text-lg" role="heading"
+                aria-level="2"> "Destinasi Wisata Nusa Tenggara Timur Mengundang Anda untuk
+                Menciptakan Kenangan Abadi!" </p>
         </div>
-        <h2
-            class="max-w-lg mb-2 text-3xl font-bold leading-none tracking-tight font-poppins text-dark dark:text-light sm:text-4xl md:mx-auto" role="heading" aria-level="1">
-            <span class="relative inline-block">
-                <svg viewBox="0 0 52 24" fill="currentColor"
-                    class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-light_gray sm:block lg:-ml-28 lg:-mt-10 lg:w-32">
-                    <defs>
-                        <pattern id="7b568941-9ed0-4f49-85a0-5e21ca6c7ad6" x="0" y="0" width=".135" height=".30">
-                            <circle cx="1" cy="1" r=".7"></circle>
-                        </pattern>
-                    </defs>
-                    <rect fill="url(#7b568941-9ed0-4f49-85a0-5e21ca6c7ad6)" width="52" height="24"></rect>
-                </svg>
-                <span class="relative">"Jelajahi </span>
-            </span> surga tersembunyi di
-            Nusa Tenggara Timur!"
-        </h2>
-        <p class="text-base font-normal font-inter text-graydark dark:text-graylight md:text-lg" role="heading" aria-level="2"> "Destinasi Wisata Nusa Tenggara Timur Mengundang Anda untuk
-            Menciptakan Kenangan Abadi!" </p>
-    </div>
 
         <!-- Search and Filter Section -->
         <div class="relative z-20 my-2">
@@ -56,10 +57,10 @@
 
                 <!-- Filter -->
                 <div
-                    class="flex flex-col items-stretch justify-end flex-shrink-0 w-full space-y-2 md:w-auto md:flex-row md:items-center md:space-x-3 md:space-y-0">
+                    class="filter-dropdown-container flex flex-col items-stretch justify-end flex-shrink-0 w-full space-y-2 md:w-auto md:flex-row md:items-center md:space-x-3 md:space-y-0">
                     <div class="flex items-center max-w-lg space-x-3">
                         <button @click="toggleFilterDropdown"
-                            class="flex items-center justify-center w-full px-4 py-2 text-sm font-medium bg-white border border-gray-200 rounded-xl text-graydark hover:bg-gray-100 hover:text-primary focus:z-10 focus:outline-none focus:ring-2 focus:ring-primaryhover dark:bg-graydark dark:text-graylight md:w-auto"
+                            class="filter-toggle-button flex items-center justify-center w-full px-4 py-2 text-sm font-medium bg-white border border-gray-200 rounded-xl text-graydark hover:bg-gray-100 hover:text-primary focus:z-10 focus:outline-none focus:ring-2 focus:ring-primaryhover dark:bg-graydark dark:text-graylight md:w-auto"
                             type="button">
                             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
                                 class="w-4 h-4 mr-2 text-primarygray dark:text-graylight" viewbox="0 0 20 20"
@@ -88,11 +89,28 @@
                                     <select v-model="selectedCategory"
                                         class="block w-full rounded-xl border border-gray-300 bg-light p-2.5 text-sm capitalize text-graydark focus:border-primary focus:ring-primary dark:bg-graydark dark:text-graylight">
                                         <option value="">Semua Kategori</option>
-                                        <option v-for="category in categoriesPost" :key="category.id" :value="category.slug">
+                                        <option v-for="category in categoriesPost" :key="category.id"
+                                            :value="category.slug">
                                             {{ category.name }}
                                         </option>
                                     </select>
                                 </div>
+
+                                 <!-- sort  -->
+                <div class="my-4 sort">
+                    <label class="mb-3 text-sm font-medium text-graydark dark:text-graylight">
+                        Waktu Post
+                    </label>
+                    <select v-model="selectedSort" @change="applyFilter"
+                        class="block w-full rounded-xl border border-gray-300 bg-light p-2.5 text-sm capitalize text-graydark focus:border-primary focus:ring-primary dark:bg-graydark dark:text-graylight">
+                        <option value="terbaru">
+                            Terbaru
+                        </option>
+                        <option value="terlama">
+                            Terlama
+                        </option>
+                    </select>
+                </div>
 
                                 <div class="flex justify-center w-full pb-4 mt-6 space-x-4 md:px-4">
                                     <button aria-label="reset" type="button" @click="resetFilter"
@@ -130,6 +148,19 @@
                         </svg>
                     </button>
                 </div>
+                <div v-if="selectedSort"
+                    class="inline-flex items-center px-2 py-1 rounded-full text-xs md:text-sm bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                    <span class="mr-2">{{ getTypeDisplayName(selectedSort) }}</span>
+                    <button @click="removeSort"
+                        class="ml-1 hover:bg-green-200 dark:hover:bg-green-800 rounded-full p-0.5 transition-colors duration-200"
+                        aria-label="Hapus filter jenis wisata">
+                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
 
                 <!-- Clear All Filters Button -->
                 <button @click="clearAllFilters"
@@ -154,7 +185,7 @@
 
         <!-- Content Grid -->
         <div class="grid grid-cols-1 gap-6 mx-2 my-4 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
-            <div v-for="post in paginatedDestinations" :key="post.id" class="destination-card">
+            <div v-for="post in paginated" :key="post.id" class="destination-card">
                 <!-- post Card -->
                 <div class="hover:contrast-110 group relative flex h-[350px] w-full items-end justify-start rounded-3xl bg-cover bg-center text-left duration-300 ease-in-out hover:brightness-110 md:h-[400px]"
                     :style="`background-image:url(src/assets/${post.thumbnail.image})`">
@@ -164,7 +195,8 @@
                     <div class="absolute top-0 z-10 flex items-center justify-between w-full px-4 mt-2">
                         <a :href="`/post?kategori=${post.category.slug}`"
                             :aria-label="`kunjungi wisata${post.category.name}`"
-                            class="p-2 bg-green-200 text-sm font-medium capitalize transition duration-500 ease-in-out font-inter hover:contrast-100 hover:brightness-75 text-dark rounded-xl">{{post.category.name }}</a>
+                            class="p-2 bg-green-200 text-sm font-medium capitalize transition duration-500 ease-in-out font-inter hover:contrast-100 hover:brightness-75 text-dark rounded-xl">{{ post.category.name
+                            }}</a>
                         <a :href="`post/${post.slug}`" aria-label="kunjungi wisata"
                             class="p-2 duration-300 ease-in-out border rounded-full border-light backdrop-blur-md group-hover:bg-primary">
                             <svg class="w-5 h-5 duration-300 ease-linear rotate-45 text-light group-hover:rotate-90"
@@ -233,12 +265,7 @@
                 </button>
             </div>
         </div>
-        <GoToTop 
-      :threshold="300"
-      variant="primary"
-      :show-progress="true"
-      position="bottom-right"
-    />
+        <GoToTop :threshold="300" variant="primary" :show-progress="true" position="bottom-right" />
     </div>
 
 </template>
@@ -262,6 +289,7 @@ export default {
             // Filter states
             searchKeyword: '',
             selectedCategory: '',
+            selectedSort: 'terbaru',
             showFilterDropdown: false,
             // Pagination
             currentPage: 1,
@@ -288,12 +316,19 @@ export default {
                 });
             }
 
+            // Sort filter berdasarkan waktu
+            if (this.selectedSort === 'terbaru') {
+                filtered = filtered.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+            } else if (this.selectedSort === 'terlama') {
+                filtered = filtered.sort((a, b) => new Date(a.published_at) - new Date(b.published_at));
+            }
+
             return filtered;
         },
         totalPages() {
             return Math.ceil(this.filteredPosts.length / this.perPage);
         },
-        paginatedDestinations() {
+        paginated() {
             const start = (this.currentPage - 1) * this.perPage;
             const end = start + this.perPage;
             return this.filteredPosts.slice(start, end);
@@ -306,6 +341,7 @@ export default {
         searchPosts() {
             this.currentPage = 1;
         },
+
         toggleFilterDropdown() {
             this.showFilterDropdown = !this.showFilterDropdown;
         },
@@ -316,6 +352,7 @@ export default {
         resetFilter() {
             this.selectedCategory = '';
             this.searchKeyword = '';
+            this.selectedSort = 'terbaru';
             this.currentPage = 1;
         },
 
@@ -323,9 +360,14 @@ export default {
             this.selectedCategory = '';
             this.currentPage = 1;
         },
+        removeSort() {
+            this.selectedSort = '';
+            this.currentPage = 1;
+        },
         clearAllFilters() {
             this.selectedCategory = '';
             this.searchKeyword = '';
+            this.selectedSort = 'terbaru';
             this.currentPage = 1;
         },
         getTypeDisplayName(typeSlug) {

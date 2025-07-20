@@ -82,7 +82,7 @@ export const posts = [
     status: "published",
     author: {
       username: "beni07",
-      full_name: "beny"
+      full_name: "Beny"
     },
     published_at: "2025-07-02",
     views: 180,
