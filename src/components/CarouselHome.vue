@@ -2,7 +2,7 @@
     <section class="max-w-full mx-auto container-home lg:max-w-screen-xl">
         <div
             class="home relative mx-auto mt-4 flex w-full flex-col items-center justify-center rounded-[3rem] bg-secondary py-32 shadow-2xl lg:py-[260px]">
-            <img v-for="(tour, index) in topFiveRandomTours" :key="index" :src="`src/assets/${tour.image.image}`"
+            <img v-for="(tour, index) in topFiveRandomTours" :key="index" :src="`/assets/${tour.image.image}`"
                 :alt="`gambar wisata ${tour.name}`" class="img-slide rounded-[3rem] h-screen"
                 :class="{ active: index === currentSlide }" loading="lazy" />
 

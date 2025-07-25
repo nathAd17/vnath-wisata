@@ -66,8 +66,8 @@
                         <!-- Loop untuk 2 gambar pertama di kolom kiri -->
                         <div v-for="(tour, index) in leftColumnTours" :key="tour.id" class="flex-1"
                             style="opacity: 1; transform: scale(1);">
-                            <a :href="`destinasi/${tour.slug}`">
-                                <img :src="`/src/assets/${tour.image.image}`" :alt="tour.name"
+                            <a :href="`/destinasi/${tour.slug}`">
+                                <img :src="`/assets/${tour.image.image}`" :alt="tour.name"
                                     class="object-cover w-full min-h-72 rounded-3xl">
                             </a>
                         </div>
@@ -76,7 +76,7 @@
                     <!-- Gambar ketiga di kolom kanan -->
                     <div v-if="rightColumnTour" class="flex-1" style="opacity: 1; transform: scale(1);">
                         <a :href="`/destinasi/${rightColumnTour.slug}`">
-                            <img :src="`/src/assets/${rightColumnTour.image.image}`" :alt="rightColumnTour.name"
+                            <img :src="`/assets/${rightColumnTour.image.image}`" :alt="rightColumnTour.name"
                                 class="object-cover w-full h-full rounded-3xl">
                         </a>
                     </div>

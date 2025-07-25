@@ -5,7 +5,7 @@
         </div>
         <!-- Author Header -->
         <div v-if="user"
-            class=" text-white bg-cover bg-center font-inter rounded-3xl py-16 bg-[url('/src/assets/destinasi/danau-kelimutu.jpg')]">
+            class=" text-white bg-cover bg-center font-inter rounded-3xl py-16 bg-[url('/assets/destinasi/danau-kelimutu.jpg')]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div
                     class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8 bg-transparent backdrop-blur-md p-4 rounded-2xl">
@@ -190,7 +190,7 @@
                 <div v-for="post in paginatedPosts" :key="post.id" class="destination-card">
                     <!-- post Card -->
                     <div class="hover:contrast-110 group relative flex h-[350px] w-full items-end justify-start rounded-3xl bg-cover bg-center text-left duration-300 ease-in-out hover:brightness-110 md:h-[400px]"
-                        :style="`background-image:url(/src/assets/${post.thumbnail.image})`">
+                        :style="`background-image:url(/assets/${post.thumbnail.image})`">
                         <div
                             class="absolute top-0 bottom-0 left-0 right-0 mt-20 rounded-3xl bg-gradient-to-b from-transparent to-gray-800/80">
                         </div>
@@ -229,7 +229,7 @@
                 <!-- Empty State -->
                 <div v-if="filteredPosts.length === 0"
                     class="p-4 text-center col-span-full font-inter bg-lighthover dark:bg-graydark rounded-3xl">
-                    <img id="notFoundGif" class="mx-auto w-60" src="/src/assets/not-found.gif" alt="not-found">
+                    <img id="notFoundGif" class="mx-auto w-60" src="/not-found.gif" alt="not-found">
                     </img>
                     <h1 class="mt-4 text-3xl font-bold tracking-tight text-dark dark:text-graylight sm:text-5xl"> Tidak
                         ada

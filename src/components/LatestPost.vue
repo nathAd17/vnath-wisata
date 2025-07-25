@@ -75,7 +75,7 @@
         v-for="post in latestPosts"
         :key="post.id"
         class="relative flex items-end justify-start text-left duration-300 ease-in-out bg-center bg-cover border-t w-[22rem] hover:contrast-110 group rounded-3xl hover:brightness-110"
-        :style="`height: 400px; background-image: url('${post.thumbnail?.image ? `src/assets/${post.thumbnail.image}` : 'https://placehold.co/600x400?text=Hello+World'}');`"
+        :style="`height: 400px; background-image: url('${post.thumbnail?.image ? `/assets/${post.thumbnail.image}` : 'https://placehold.co/600x400?text=Hello+World'}');`"
       >
         <div
           class="absolute top-0 bottom-0 left-0 right-0 mt-20 rounded-3xl bg-gradient-to-b from-transparent to-gray-800/80"

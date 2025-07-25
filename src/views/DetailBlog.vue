@@ -54,7 +54,7 @@
                 <!-- {{-- section left --}} -->
                 <section v-if="post.thumbnail" class="relative container-detail md:w-3/4">
                     <img id="elImg" class="mx-auto mb-6 h-56 w-full rounded-3xl object-cover sm:h-fit max-h-[25rem]"
-                        :alt="post.title" :src="`/src/assets/${post.thumbnail.image}`" />
+                        :alt="post.title" :src="`/assets/${post.thumbnail.image}`" />
                     <button @click="fullScreen()" type="button"
                         class="absolute p-2 text-sm font-medium text-center text-white duration-500 ease-in-out border rounded-full right-5 top-4 backdrop-blur-lg hover:scale-90 focus:outline-none focus:ring-4 focus:ring-blue-300"
                         aria-label="gambar">
@@ -280,12 +280,6 @@ export default {
                 year: 'numeric'
             }).format(date);
         },
-        formatYear(dateString) {
-            const date = new Date(dateString);
-            return new Intl.DateTimeFormat('id-ID', {
-                year: 'numeric'
-            }).format(date);
-        }
     },
     components: {
         Breadcrumb,
