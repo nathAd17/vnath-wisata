@@ -10,12 +10,12 @@ export const tours = [
             slug: "perairan-laut"
         },
         image: {
-            image: "destinasi/baliana.jpg",
+            image: "destinasi/baliana.webp",
         },
         gallery: [
             {image: "destinasi/pantai-baliana1.webp"},
-            {image: "destinasi/pantai-baliana2.jpg"},
-            {image: "destinasi/pantai-baliana3.jpg"},
+            {image: "destinasi/pantai-baliana2.webp"},
+            {image: "destinasi/pantai-baliana3.webp"},
         ],
         regency: {
             name: "Kupang"
@@ -39,12 +39,12 @@ export const tours = [
             slug: "goa-dan-perairan-darat"
         },
         image: {
-            image: "destinasi/gua-kristal.jpg",
+            image: "destinasi/gua-kristal.webp",
         },
         gallery: [
-            {image: "destinasi/gua-kristal1.jpeg"},
-            {image: "destinasi/gua-kristal2.jpg"},
-            {image: "destinasi/gua-kristal3.jpg"}
+            {image: "destinasi/gua-kristal1.webp"},
+            {image: "destinasi/gua-kristal2.webp"},
+            {image: "destinasi/gua-kristal3.webp"}
         ],
         regency: {
             name: "Kupang"
@@ -68,14 +68,14 @@ export const tours = [
             slug: "goa-dan-perairan-darat"
         },
         image: {
-            image: "destinasi/air-terjun-oenesu.png",
+            image: "destinasi/air-terjun-oenesu.webp",
         },
         regency: {
             name: "Kupang"
         },
         gallery: [
-            {image: "destinasi/air-terjun-oenesu1.jpg"},
-            {image: "destinasi/air-terjun-oenesu2.jpg"},
+            {image: "destinasi/air-terjun-oenesu1.webp"},
+            {image: "destinasi/air-terjun-oenesu2.webp"},
             {image: "destinasi/air-terjun-oenesu3.webp"}
         ],
         island: {

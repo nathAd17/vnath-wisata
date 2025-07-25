@@ -10,7 +10,7 @@ export const posts = [
       slug: "destinasi-wisata",
     },
     thumbnail: {
-      image: "destinasi/fulan-fehan.jpg",
+      image: "destinasi/fulan-fehan.webp",
       alt: "fulan-fehan"
     },
     status: "published",
@@ -76,7 +76,7 @@ export const posts = [
       slug: "event-dan-festival",
     },
     thumbnail: {
-      image: "destinasi/danau-kelimutu.jpg",
+      image: "destinasi/danau-kelimutu.webp",
       alt: "danau-kelimutu"
     },
     status: "published",
