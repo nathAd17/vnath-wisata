@@ -5,7 +5,7 @@
         </div>
         <!-- Author Header -->
         <div v-if="user"
-            class=" text-white bg-cover bg-center font-inter rounded-3xl py-16 bg-[url('/assets/destinasi/danau-kelimutu.jpg')]">
+            class=" text-white bg-cover bg-center font-inter rounded-3xl py-16 bg-[url('/assets/destinasi/danau-kelimutu.webp')]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div
                     class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8 bg-transparent backdrop-blur-md p-4 rounded-2xl">
@@ -218,7 +218,7 @@
                             <a :href="`post/${post.slug}`"
                                 class="text-base font-medium leading-7 tracking-tight capitalize font-rubik text-light"
                                 :aria-label="`kunjungi blog ${post.slug}`">
-                                {{ post.content }}
+                                {{truncateContent(post.content) }}
                             </a>
                         </main>
                         <a :href="`post/${post.slug}`" :aria-label="`kunjungi blog ${post.slug}`"

@@ -21,7 +21,7 @@ export const tours = [
             name: "Kupang"
         },
         island: {
-            name: "Timor"
+            name: "timor"
         },
         facilities: ["Pos Jaga", "Warung", "Tempat Parkir", "Penyewaan Kuda"],
         description: "Pantai indah dengan pasir putih dan ombak tenang, cocok untuk bersantai dan menikmati matahari terbenam.",
@@ -50,7 +50,7 @@ export const tours = [
             name: "Kupang"
         },
         island: {
-            name: "Timor"
+            name: "timor"
         },
         facilities: ["Pos Jaga", "Warung", "Tempat Parkir", "Penyewaan Kuda"],
         description: "Gua bawah tanah dengan air jernih seperti kristal, populer untuk berenang dan eksplorasi.",
@@ -79,7 +79,7 @@ export const tours = [
             {image: "destinasi/air-terjun-oenesu3.webp"}
         ],
         island: {
-            name: "Timor"
+            name: "timor"
         },
         facilities: ["Pos Jaga", "Warung", "Tempat Parkir", "Penyewaan Kuda"],
         description: "Air terjun bertingkat yang indah dengan suasana hutan tropis, cocok untuk piknik dan fotografi.",

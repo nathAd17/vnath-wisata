@@ -7,7 +7,7 @@
         v-for="(tour, index) in tours" 
         :key="tour.id"
         :class="['img-slide', 'rounded-[3rem]', 'h-screen', { 'active': index === currentSlide }]"
-        :src="`src/assets${tour.image.image}`" 
+        :src="`src/assets${tour.image.image}`"
         :alt="tour.name"
         aria-label="gambar-wisata" 
         loading="lazy" 

@@ -129,7 +129,7 @@
                                     <div class="card-body my-2">
                                         <h3 class="text-lg font-medium text-primarydark dark:text-light">
                                             {{ other.title }}</h3>
-                                        <p class="font-light text-sm">
+                                        <p class="font-light text-sm text-primarydark dark:text-light">
                                             {{ truncateContent(other.content) }}
                                         </p>
                                     </div>

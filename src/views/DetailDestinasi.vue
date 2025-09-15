@@ -140,7 +140,7 @@
                         <div class="relative mb-2 md:pr-2 rounded-lg sm:max-w-xl md:mx-auto md:max-w-full lg:max-w-screen-xl"
                             id="deskripsi">
                             <article
-                                class="container p-3 mt-4 text-sm  text-left bg-white rounded-xl shadow-lg dark:text-graylight font-inter text-primarydark md:text-lg">
+                                class="container p-3 mt-4 text-sm  text-left bg-white dark:bg-dark rounded-xl shadow-lg dark:text-graylight font-inter text-primarydark md:text-lg">
                                 <h2
                                     class="text-xl font-semibold underline text-primarydark dark:text-graylight underline-offset-8">
                                     Informasi Singkat</h2>
@@ -148,7 +148,7 @@
                                     v-html="tour.fullDescription">
                                 </div>
                             </article>
-                            <div class="bg-white mt-3 rounded-xl shadow-lg px-3 py-1">
+                            <div class="bg-white dark:bg-dark mt-3 rounded-xl shadow-lg px-3 py-1">
                             <ol class="w-full my-4 font-inter text-left" role="list" aria-label="info-wisata">
                                 <li>
                                     <div class="w-full p-2 border-l-2 border-secondarydark text-primarydark dark:text-secondary"
@@ -217,7 +217,7 @@
                     <!-- rigth section -->
                     <section class="w-full px-1 md:float-right md:w-1/3 font-inter">
                         
-                        <div class="overflow-x-auto mt-4 md:block bg-white rounded-xl shadow-lg px-3 py-1">
+                        <div class="overflow-x-auto mt-4 md:block bg-white dark:bg-dark rounded-xl shadow-lg px-3 py-1">
                             <div class="container-maps">
                                  <h2
                                     class="text-xl font-semibold underline text-primarydark dark:text-graylight underline-offset-8">

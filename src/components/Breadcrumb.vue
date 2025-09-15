@@ -93,6 +93,7 @@ export default {
         'Beranda': 'Beranda',
         'Destinasi': 'Destinasi',
         'detailDestinasi': 'Detail Destinasi',
+        'destinasiPulau': 'Destinasi Pulau',
         'Blog': 'Blog',
         'detailBlog': 'Detail Blog',
         'authorPost': 'Penulis Blog',
@@ -108,27 +109,28 @@ export default {
       // Add current route if not home
       if (route.name !== 'Beranda') {
         // Handle parent routes
-        if (route.name === 'detailDestinasi') {
+        if (route.name === 'detailDestinasi' ||route.name === 'destinasiPulau') {
           // Add Destinasi as parent
           items.push({
             name: routeNameMap['Destinasi'] || 'Destinasi',
             path: '/destinasi'
           });
         }
-        else if (route.name === 'detailBlog') {
+        else if (route.name === 'detailBlog' || route.name === 'authorPost') {
           // Add Blog as parent
           items.push({
             name: routeNameMap['Blog'] || 'Blog',
             path: '/post'
           });
         }
-        else if (route.name === 'authorPost') {
-          // Add Blog as parent
-          items.push({
-            name: routeNameMap['Blog'] || 'Blog',
-            path: '/post'
-          });
-        }
+        // }
+        // else if (route.name === 'authorPost') {
+        //   // Add Blog as parent
+        //   items.push({
+        //     name: routeNameMap['Blog'] || 'Blog',
+        //     path: '/post'
+        //   });
+        // }
 
         // Add current route
         items.push({

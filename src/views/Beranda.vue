@@ -5,6 +5,7 @@
     /> -->
     <CarouselHome />
     <About />
+    <Island />
     <LatestPost />
     <GoToTop 
       :threshold="300"
@@ -18,6 +19,7 @@
 // import HomeCarousel from '../components/HomeCarousel.vue';
 import CarouselHome from '../components/CarouselHome.vue';
 import LatestPost from '../components/LatestPost.vue';
+import Island from '../components/Island.vue';
 import About from '../components/About.vue';
 import GoToTop from '../components/GoToTop.vue';
 
@@ -27,6 +29,7 @@ export default {
         CarouselHome,
         LatestPost,
         About,
+        Island,
         GoToTop
     },
     methods: {

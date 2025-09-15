@@ -1,7 +1,7 @@
 <template>
     <section class="relative max-w-full pt-6 mx-auto lg:max-w-screen-xl">
         <div class="absolute inset-0 -z-10 mt-8 h-full rounded-t-[3rem] bg-cover bg-fixed bg-center bg-no-repeat shadow-xl"
-            style="background-image: url('/assets/destinasi/air-terjun-oenesu.png')" role="img"
+            style="background-image: url('/assets/destinasi/air-terjun-oenesu.webp')" role="img"
             aria-label="background-wisata">
         </div>
         <div class="max-w-xl mx-auto mt-2 text-center lg:max-w-2xl">

@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Beranda from '../views/Beranda.vue'
 import Destinasi from '../views/Destinasi.vue'
 import detailDestinasi from '../views/DetailDestinasi.vue'
+import destinasiPulau from '../views/DestinasiPulau.vue'
 import detailBlog from '../views/DetailBlog.vue'
 import authorPost from '../views/AuthorPost.vue'
 import Blog from '../views/Blog.vue'
@@ -24,6 +25,11 @@ const routes = [
     path: '/destinasi/:slug',
     name: 'detailDestinasi',
     component: detailDestinasi
+  },
+  {
+    path: '/destinasi/pulau/:name',
+    name: 'destinasiPulau',
+    component: destinasiPulau
   },
   {
     path: '/post',

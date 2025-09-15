@@ -27,7 +27,7 @@
                     style="opacity: 1; transform: none;">
                     <p class="leading-7 font-inter dark:text-graylight" aria-label="tentang flobamora">Flobamora,
                         singkatan
-                        dari Flores, Sumba, Timor (Timor, Rote, Sabu), dan Alor, adalah sebuah wilayah yang memadukan
+                        dari Flores, Sumba, Timor, dan Alor, adalah sebuah wilayah yang memadukan
                         keindahan alam dengan
                         kekayaan budaya yang luar biasa. Di sini, Anda akan menemukan pantai-pantai berpasir putih, air
                         terjun yang memukau,
@@ -49,7 +49,7 @@
                         biarkan Pesona
                         Flobamora membawa Anda lebih dekat dengan keajaiban Indonesia Timur!
                     </p>
-                    <a href="/post"
+                    <a href="/destinasi"
                         class="relative z-10 inline-flex items-center justify-center gap-2 px-2 py-1 mt-2 overflow-hidden text-base border-2 rounded-full group isolation-auto border-light bg-primary font-inter text-light backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-primarydark before:transition-all before:duration-700 hover:text-light before:hover:left-0 before:hover:w-full before:hover:scale-150 before:hover:duration-700 md:px-4 md:py-2 md:text-lg lg:font-semibold"
                         aria-label="jelajahi-destinasi">
                         Jelajahi sekarang

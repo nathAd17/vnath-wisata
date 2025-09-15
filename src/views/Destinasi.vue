@@ -262,7 +262,7 @@
                     </svg>Prev
                 </button>
                 <span class="px-4 py-2 text-sm text-graydark dark:text-graylight">
-                    Page {{ currentPage }} of {{ totalPages }}
+                    Hal {{ currentPage }} dari {{ totalPages }}
                 </span>
                 <button @click="nextPage" :disabled="currentPage === totalPages"
                     class="relative inline-flex items-center justify-center px-4 py-2 text-base font-semibold leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-full hover:text-gray-500 hover:bg-green-100 focus:outline-none focus:ring ring-gray-300 focus:border-blue-300 active:bg-gray-100 active:text-gray-700">
