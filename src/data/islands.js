@@ -3,42 +3,42 @@ export const islands = [
       id: 1,
       name: "sabu",
       description: "Pulau dengan keindahan alam yang beragam dan budaya yang kaya",
-      image: "pulau/sabu.jpg",
+      image: "pulau/sabu.webp",
       highlights: ["Danau Kelimutu", "Desa Adat Bena", "Gua Rangko"]
     },
     {
       id: 2,
       name: "sumba",
       description: "Pulau dengan budaya dan tradisi yang kaya serta pantai-pantai eksotis",
-      image: "pulau/sumba.jpg",
+      image: "pulau/sumba.webp",
       highlights: ["Pantai Nihiwatu", "Desa Adat Ratenggaro", "Air Terjun Sekumpul"]
     },
     {
       id: 3,
       name: "timor",
       description: "Pulau dengan pemandangan savana yang eksotis dan budaya yang unik",
-      image: "pulau/timor.jpg",
+      image: "pulau/timor.webp",
       highlights: ["Bukit Cinta", "Pantai Lasiana", "Desa Adat Boti"]
     },
     {
       id: 4,
       name: "flores",
       description: "Pulau habitat asli komodo dan keindahan alam yang menakjubkan",
-      image: "pulau/flores.jpg",
+      image: "pulau/flores.webp",
       highlights: ["Komodo Dragon", "Pink Beach", "Padar Island"]
     },
     {
       id: 5,
       name: "rote",
       description: "Pulau dengan pantai-pantai indah dan gunung yang menawan",
-      image: "pulau/rote.jpg",
+      image: "pulau/rote.webp",
       highlights: ["Pantai Pink", "Gili Trawangan", "Gunung Rinjani"]
     },
     {
       id: 6,
       name: "alor",
       description: "Pulau dengan pantai surfing terbaik dan budaya yang autentik",
-      image: "pulau/alor.jpg",
+      image: "pulau/alor.webp",
       highlights: ["Pantai Lakey", "Moyo Island", "Sumbawa Besar"]
     }
 ];

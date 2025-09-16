@@ -2,7 +2,7 @@
 <section class="relative mx-auto my-2 h-full lg:max-w-screen-xl">
         <!-- Background Hero Section -->
         <div class="mx-auto my-6 h-full rounded-[3rem] bg-gray-500 bg-opacity-100 bg-cover bg-fixed bg-center bg-no-repeat bg-blend-multiply lg:max-w-screen-xl"
-             style="background-image: url('/assets/pulau-padar.jpg');">
+             style="background-image: url('/assets/pulau-padar.webp');">
             
             <!-- Header Section -->
             <div class="max-w-xl mx-auto my-6 sm:text-center md:mb-4 lg:max-w-2xl">
