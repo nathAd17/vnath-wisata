@@ -7,7 +7,7 @@
     <img
       src="/assets/sea2dark.svg"
       class="absolute right-0 invisible block w-12 h-12 top-20 -z-10 dark:hidden md:visible"
-      alt="sea"
+      alt="sea" loading="lazy"
     />
     <img
       src="/assets/sea2.svg"

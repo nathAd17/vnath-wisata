@@ -63,7 +63,7 @@
                     <div class="flex-1 relative">
                         <img id="elImg" class="w-full h-full rounded-l-3xl object-cover cursor-pointer"
                             :alt="tour.name" :src="`/assets/${tour.image.image}`"
-                            @click="openGalleryModal" />
+                            @click="openGalleryModal" loading="lazy"/>
                     </div>
                     
                     <!-- Side Images -->
@@ -73,7 +73,7 @@
                             <img v-if="tour.gallery.length > 1" 
                                 :src="`/assets/${tour.gallery[0].image}`" 
                                 :alt="tour.name"
-                                class="w-full h-full rounded-r-3xl object-cover" />
+                                class="w-full h-full rounded-r-3xl object-cover" loading="lazy"/>
                             <div v-else class="w-full h-full rounded-br-3xl bg-gray-200 flex items-center justify-center">
                                 <span class="text-gray-500">Tidak ada foto lain</span>
                             </div>
@@ -114,7 +114,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                             <!-- Main image -->
                             <div class="relative cursor-pointer group">
-                                <img :src="`/assets/${tour.image.image}`" :alt="tour.name"
+                                <img :src="`/assets/${tour.image.image}`" loading="lazy" :alt="tour.name"
                                     class="object-cover w-full h-48 transition-transform rounded-lg group-hover:scale-105" />
                                 <div class="absolute inset-0 transition-opacity bg-black bg-opacity-0 rounded-lg group-hover:scale-105 group-hover:bg-opacity-20">
                                 </div>
@@ -123,7 +123,7 @@
                             <!-- Gallery images -->
                             <div v-for="(photo, index) in tour.gallery" :key="index"
                                 class="relative cursor-pointer group">
-                                <img :src="`/assets/${photo.image}`" :alt="tour.name"
+                                <img :src="`/assets/${photo.image}`" loading="lazy" :alt="tour.name"
                                     class="object-cover w-full h-48 transition-transform rounded-lg group-hover:scale-105" />
                                 <div class="absolute inset-0 transition-opacity bg-black bg-opacity-0 rounded-lg group-hover:scale-105 group-hover:bg-opacity-20">
                                 </div>

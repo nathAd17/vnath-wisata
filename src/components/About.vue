@@ -68,7 +68,7 @@
                             style="opacity: 1; transform: scale(1);">
                             <a :href="`/destinasi/${tour.slug}`">
                                 <img :src="`/assets/${tour.image.image}`" :alt="tour.name"
-                                    class="object-cover w-full min-h-72 rounded-3xl">
+                                    class="object-cover w-full min-h-72 rounded-3xl" loading="lazy">
                             </a>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                     <div v-if="rightColumnTour" class="flex-1" style="opacity: 1; transform: scale(1);">
                         <a :href="`/destinasi/${rightColumnTour.slug}`">
                             <img :src="`/assets/${rightColumnTour.image.image}`" :alt="rightColumnTour.name"
-                                class="object-cover w-full h-full rounded-3xl">
+                                class="object-cover w-full h-full rounded-3xl" loading="lazy">
                         </a>
                     </div>
                 </section>
@@ -89,7 +89,6 @@
 import { tours } from '../data/tours.js'
 
 export default {
-  name: 'DynamicToursSection',
   data() {
     return {
       allTours: tours

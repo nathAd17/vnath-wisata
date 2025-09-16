@@ -214,7 +214,7 @@
                 <!-- Empty State -->
                 <div v-if="filteredTours.length === 0"
                     class="p-4 text-center col-span-full font-inter bg-lighthover dark:bg-graydark rounded-3xl">
-                    <img id="notFoundGif" class="mx-auto w-60" src="/not-found.gif" alt="not-found">
+                    <img id="notFoundGif" class="mx-auto w-60" src="/not-found.gif" alt="not-found" loading="lazy">
                     </img>
                     <h1 class="mt-4 text-3xl font-bold tracking-tight text-dark dark:text-graylight sm:text-5xl"> Tidak
                         ada

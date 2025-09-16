@@ -3,8 +3,8 @@
         <div
             class="home relative mx-auto mt-4 flex w-full flex-col items-center justify-center rounded-[3rem] bg-secondary py-32 shadow-2xl lg:py-[260px]">
             <img v-for="(tour, index) in topFiveRandomTours" :key="index" :src="`/assets/${tour.image.image}`"
-                :alt="`gambar wisata ${tour.name}`" class="img-slide rounded-[3rem] h-screen"
-                :class="{ active: index === currentSlide }" loading="lazy" />
+                :alt="`gambar wisata ${tour.name}`" class="img-slide rounded-[3rem] h-screen" loading="lazy"
+                :class="{ active: index === currentSlide }" />
 
             <div v-for="(tour, index) in topFiveRandomTours" :key="'content-' + index"
                 class="relative content z-[777] text-light w-[80%] lg:max-w-screen-lg xl:max-w-screen-xl max-w-full md:mx-auto lg:px-0 my-12"

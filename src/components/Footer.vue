@@ -71,7 +71,7 @@
                     <div class="max-w-xl mx-auto my-2 text-center text-light md:mb-0 lg:text-left">
                         <a href="/" class="flex items-center justify-center lg:justify-start" title="beranda"
                             aria-label="Kembali ke Beranda">
-                            <img src="/logo.png" class="h-12 mr-2" alt="Pesona Flobamora Logo" />
+                            <img src="/logo.png" class="h-12 mr-2" alt="Pesona Flobamora Logo" loading="lazy" />
                             <span class="self-center text-xl font-medium whitespace-nowrap font-inter">Pesona
                                 Flobamora</span>
                         </a>

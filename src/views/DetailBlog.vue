@@ -54,7 +54,7 @@
                 <!-- {{-- section left --}} -->
                 <section v-if="post.thumbnail" class="relative container-detail md:w-3/4">
                     <img id="elImg" class="mx-auto mb-6 h-56 w-full rounded-3xl object-cover sm:h-fit max-h-[25rem]"
-                        :alt="post.title" :src="`/assets/${post.thumbnail.image}`" />
+                        :alt="post.title" :src="`/assets/${post.thumbnail.image}`" loading="lazy"/>
                     <button @click="fullScreen()" type="button"
                         class="absolute p-2 text-sm font-medium text-center text-white duration-500 ease-in-out border rounded-full right-5 top-4 backdrop-blur-lg hover:scale-90 focus:outline-none focus:ring-4 focus:ring-blue-300"
                         aria-label="gambar">
@@ -93,7 +93,7 @@
                                     class="flex flex-col items-center w-64 md:w-full gap-2 px-2 py-1 transition-all duration-300 ease-in-out cursor-pointer rounded-xl hover:scale-105 hover:bg-opacity-80 md:flex-row">
                                     <div class="basis-1/3 animate-pulse">
                                         <img src="https://placehold.co/400x300?text=Tidak\nditemukan&font=roboto"
-                                            alt="not found" class="rounded-md">
+                                            alt="not found" class="rounded-md" loading="lazy">
                                     </div>
                                     <div class="basis-3/4">
                                         <h3 class="text-sm font-light text-dark dark:text-graylight"
@@ -138,7 +138,7 @@
                                             <div class="flex items-center space-x-2">
                                                 <img class="rounded-full w-7 h-7"
                                                     :src="`https://ui-avatars.com/api/?name=${other.author.username}`"
-                                                    alt="avatar-user" />
+                                                    alt="avatar-user" loading="lazy"/>
                                                 <span class="text-sm font-medium text-primarydark dark:text-white">
                                                     {{ other.author.full_name }}
                                                 </span>
