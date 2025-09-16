@@ -19,7 +19,7 @@
                         class="block my-4 text-base font-medium text-white capitalize font-inter hover:text-lighthover md:font-semibold">
                         {{ tour.location }} - Kab.{{ tour.regency.name }}
                     </a>
-                    <a :href="tour.url"
+                    <a :href="`/destinasi/${tour.slug}`"
                         class="relative z-10 inline-flex items-center justify-center gap-2 px-2 py-1 mx-auto mt-2 overflow-hidden text-base bg-transparent border-2 rounded-full cursor-pointer group isolation-auto border-light font-inter text-light backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-primary before:transition-all before:duration-700 hover:text-light before:hover:left-0 before:hover:w-full before:hover:scale-150 before:hover:duration-700 md:px-4 md:py-2 md:text-lg lg:font-semibold"
                         aria-label="detail-wisata"> Jelajahi
                         <svg class="justify-end w-8 h-8 p-2 duration-300 ease-linear rotate-45 border rounded-full border-light text-light group-hover:rotate-90 group-hover:bg-light"
