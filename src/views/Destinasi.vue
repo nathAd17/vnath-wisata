@@ -1,6 +1,6 @@
 <template>
     <div class="max-w-full mx-auto container-destination lg:max-w-screen-xl">
-        <div class="mb-8 mx-2 sm:mx-4">
+        <div class="mx-2 mb-8 sm:mx-4">
             <Breadcrumb />
         </div>
         <!-- Header Section -->
@@ -81,7 +81,7 @@
 
                         <!-- Dropdown menu -->
                         <div v-show="showFilterDropdown"
-                            class="absolute right-0 top-14 z-10 p-4 mt-2 bg-white shadow w-max rounded-2xl dark:bg-graydark">
+                            class="absolute right-0 z-10 p-4 mt-2 bg-white shadow top-14 w-max rounded-2xl dark:bg-graydark">
                             <form @submit.prevent="applyFilter" class="font-inter">
                                 <div>
                                     <div class="regency">
@@ -131,12 +131,12 @@
 
          <!-- Active Filter Tags -->
         <div v-if="hasActiveFilters" class="px-4 mb-6">
-            <div class="flex flex-wrap gap-2 items-center">
-                <span class="md:text-sm text-xs text-graydark dark:text-graylight font-medium">Filter aktif:</span>
+            <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-medium md:text-sm text-graydark dark:text-graylight">Filter aktif:</span>
                 
                 <!-- Regency Filter Tag -->
                 <div v-if="selectedRegency" 
-                     class="inline-flex items-center px-2 py-1 rounded-full text-xs md:text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                     class="inline-flex items-center px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded-full md:text-sm dark:bg-blue-900 dark:text-blue-200">
                     <span class="mr-2">{{ selectedRegency }}</span>
                     <button @click="removeRegencyFilter" 
                             class="ml-1 hover:bg-blue-200 dark:hover:bg-blue-800 rounded-full p-0.5 transition-colors duration-200"
@@ -149,7 +149,7 @@
 
                 <!-- Type Filter Tag -->
                 <div v-if="selectedType" 
-                     class="inline-flex items-center px-2 py-1 rounded-full text-xs md:text-sm bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                     class="inline-flex items-center px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full md:text-sm dark:bg-green-900 dark:text-green-200">
                     <span class="mr-2">{{ getTypeDisplayName(selectedType) }}</span>
                     <button @click="removeTypeFilter" 
                             class="ml-1 hover:bg-green-200 dark:hover:bg-green-800 rounded-full p-0.5 transition-colors duration-200"
@@ -162,7 +162,7 @@
 
                 <!-- Island Filter Tag (if you have selectedIsland) -->
                 <div v-if="selectedIsland" 
-                     class="inline-flex items-center px-2 py-1 rounded-full text-xs md:text-sm bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
+                     class="inline-flex items-center px-2 py-1 text-xs text-purple-800 bg-purple-100 rounded-full md:text-sm dark:bg-purple-900 dark:text-purple-200">
                     <span class="mr-2">{{ selectedIsland }}</span>
                     <button @click="removeIslandFilter" 
                             class="ml-1 hover:bg-purple-200 dark:hover:bg-purple-800 rounded-full p-0.5 transition-colors duration-200"
@@ -175,7 +175,7 @@
 
                 <!-- Clear All Filters Button -->
                 <button @click="clearAllFilters" 
-                        class="inline-flex items-center px-2 py-1 rounded-full text-xs md:text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                        class="inline-flex items-center px-2 py-1 text-xs text-gray-800 transition-colors duration-200 bg-gray-100 rounded-full md:text-sm hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
                         aria-label="Hapus semua filter">
                     <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -208,7 +208,7 @@
                             :class="{
                                 'bg-green-200': tour.category.slug === 'pegunungan',
                                 'bg-blue-200': tour.category.slug === 'perairan-laut',
-                                'bg-amber-100': tour.category.slug === 'goa-dan-perairan-darat',
+                                'bg-amber-100': tour.category.slug === 'gua-dan-perairan-darat',
                                 'bg-rose-100': tour.category.slug === 'budaya',
                             }">{{
                                 tour.category.name }}</a>

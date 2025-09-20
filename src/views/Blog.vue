@@ -1,6 +1,6 @@
 <template>
     <div class="max-w-full mx-auto container-destination lg:max-w-screen-xl">
-        <div class="mb-8 mx-2 sm:mx-4">
+        <div class="mx-2 mb-8 sm:mx-4">
             <Breadcrumb />
         </div>
         <!-- Header Section -->
@@ -57,10 +57,10 @@
 
                 <!-- Filter -->
                 <div
-                    class="filter-dropdown-container flex flex-col items-stretch justify-end flex-shrink-0 w-full space-y-2 md:w-auto md:flex-row md:items-center md:space-x-3 md:space-y-0">
+                    class="flex flex-col items-stretch justify-end flex-shrink-0 w-full space-y-2 filter-dropdown-container md:w-auto md:flex-row md:items-center md:space-x-3 md:space-y-0">
                     <div class="flex items-center max-w-lg space-x-3">
                         <button @click="toggleFilterDropdown"
-                            class="filter-toggle-button flex items-center justify-center w-full px-4 py-2 text-sm font-medium bg-white border border-gray-200 rounded-xl text-graydark hover:bg-gray-100 hover:text-primary focus:z-10 focus:outline-none focus:ring-2 focus:ring-primaryhover dark:bg-graydark dark:text-graylight md:w-auto"
+                            class="flex items-center justify-center w-full px-4 py-2 text-sm font-medium bg-white border border-gray-200 filter-toggle-button rounded-xl text-graydark hover:bg-gray-100 hover:text-primary focus:z-10 focus:outline-none focus:ring-2 focus:ring-primaryhover dark:bg-graydark dark:text-graylight md:w-auto"
                             type="button">
                             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
                                 class="w-4 h-4 mr-2 text-primarygray dark:text-graylight" viewbox="0 0 20 20"
@@ -79,7 +79,7 @@
 
                         <!-- Dropdown menu -->
                         <div v-show="showFilterDropdown"
-                            class="absolute right-0 top-14 z-10 p-4 mt-2 bg-white shadow w-max rounded-2xl dark:bg-graydark">
+                            class="absolute right-0 z-10 p-4 mt-2 bg-white shadow top-14 w-max rounded-2xl dark:bg-graydark">
                             <form @submit.prevent="applyFilter" class="font-inter">
 
                                 <div class="my-4 category">
@@ -131,12 +131,12 @@
 
         <!-- Active Filter Tags -->
         <div v-if="hasActiveFilters" class="px-4 mb-6">
-            <div class="flex flex-wrap gap-2 items-center">
-                <span class="md:text-sm text-xs text-graydark dark:text-graylight font-medium">Filter aktif:</span>
+            <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-medium md:text-sm text-graydark dark:text-graylight">Filter aktif:</span>
 
                 <!-- Type Filter Tag -->
                 <div v-if="selectedCategory"
-                    class="inline-flex items-center px-2 py-1 rounded-full text-xs md:text-sm bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                    class="inline-flex items-center px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full md:text-sm dark:bg-green-900 dark:text-green-200">
                     <span class="mr-2">{{ getTypeDisplayName(selectedCategory) }}</span>
                     <button @click="removeCategoryFilter"
                         class="ml-1 hover:bg-green-200 dark:hover:bg-green-800 rounded-full p-0.5 transition-colors duration-200"
@@ -149,7 +149,7 @@
                     </button>
                 </div>
                 <div v-if="selectedSort"
-                    class="inline-flex items-center px-2 py-1 rounded-full text-xs md:text-sm bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                    class="inline-flex items-center px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full md:text-sm dark:bg-green-900 dark:text-green-200">
                     <span class="mr-2">{{ getTypeDisplayName(selectedSort) }}</span>
                     <button @click="removeSort"
                         class="ml-1 hover:bg-green-200 dark:hover:bg-green-800 rounded-full p-0.5 transition-colors duration-200"
@@ -164,7 +164,7 @@
 
                 <!-- Clear All Filters Button -->
                 <button @click="clearAllFilters"
-                    class="inline-flex items-center px-2 py-1 rounded-full text-xs md:text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                    class="inline-flex items-center px-2 py-1 text-xs text-gray-800 transition-colors duration-200 bg-gray-100 rounded-full md:text-sm hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
                     aria-label="Hapus semua filter">
                     <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd"
@@ -195,7 +195,7 @@
                     <div class="absolute top-0 z-10 flex items-center justify-between w-full px-4 mt-2">
                         <a :href="`/post?kategori=${post.category.slug}`"
                             :aria-label="`kunjungi wisata${post.category.name}`"
-                            class="p-2 bg-green-200 text-sm font-medium capitalize transition duration-500 ease-in-out font-inter hover:contrast-100 hover:brightness-75 text-dark rounded-xl">{{ post.category.name
+                            class="p-2 text-sm font-medium capitalize transition duration-500 ease-in-out bg-green-200 font-inter hover:contrast-100 hover:brightness-75 text-dark rounded-xl">{{ post.category.name
                             }}</a>
                         <a :href="`post/${post.slug}`" aria-label="kunjungi wisata"
                             class="p-2 duration-300 ease-in-out border rounded-full border-light backdrop-blur-md group-hover:bg-primary">
@@ -216,7 +216,13 @@
                         <a :href="`post/${post.slug}`"
                             class="text-base font-medium leading-7 tracking-tight capitalize font-rubik text-light"
                             :aria-label="`kunjungi blog ${post.slug}`">
-                            {{ post.content }}
+                            {{ post.title }}
+                        </a>
+                        <br>
+                        <a :href="`post/${post.slug}`"
+                            class="text-sm font-normal leading-7 tracking-tight capitalize font-rubik text-light"
+                            :aria-label="`kunjungi blog ${post.slug}`">
+                            {{ truncateContent(post.content) }}
                         </a>
                     </main>
                     <a :href="`post/${post.slug}`" :aria-label="`kunjungi blog ${post.slug}`"
@@ -395,6 +401,11 @@ export default {
                 month: 'short',
                 year: 'numeric'
             }).format(date);
+        },
+        truncateContent(content){
+            if (!content) return '';
+            const textContent = content.replace(/<[^>]*>/g, '');
+            return textContent.length > 100 ? textContent.substring(0, 100) + '...' : textContent;
         }
     },
     mounted() {

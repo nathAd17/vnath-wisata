@@ -2,7 +2,7 @@
     <section id="tentang flobamora" class="relative px-6 py-16 mx-auto my-10 lg:max-w-screen-xl lg:py-20">
         <div class="assets">
             <img src="/assets/mountain1.svg" class="absolute origin-bottom right-4 top-8 h-14 w-14 -rotate-12"
-                alt="mountain">
+                alt="mountain" loading="lazy">
         </div>
         <div class="max-w-xl mx-auto mb-5 text-center lg:max-w-2xl">
             <h2 class="inline-block p-2 mb-2 text-xs font-bold tracking-wider text-center uppercase rounded-full shadow-xl bg-primary font-poppins text-light md:mb-4"

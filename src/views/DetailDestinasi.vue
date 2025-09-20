@@ -1,6 +1,6 @@
 <template>
-    <div class="min-h-screen max-w-screen-xl px-4 mx-auto">
-        <div class="mb-8 mx-2 sm:mx-4">
+    <div class="max-w-screen-xl min-h-screen px-4 mx-auto">
+        <div class="mx-2 mb-8 sm:mx-4">
             <Breadcrumb />
         </div>
         <!-- <nav class="flex" aria-label="Breadcrumb">
@@ -57,31 +57,31 @@
                 </a>
             </header>
             <!-- Updated Gallery Section -->
-            <section class="relative container-img mb-4">
+            <section class="relative mb-4 container-img">
                 <div class="flex gap-2 h-56 sm:h-64 md:h-[30rem]">
                     <!-- Main Image -->
-                    <div class="flex-1 relative">
-                        <img id="elImg" class="w-full h-full rounded-l-3xl object-cover cursor-pointer"
+                    <div class="relative flex-1">
+                        <img id="elImg" class="object-cover w-full h-full cursor-pointer rounded-l-3xl"
                             :alt="tour.name" :src="`/assets/${tour.image.image}`"
                             @click="openGalleryModal" loading="lazy"/>
                     </div>
                     
                     <!-- Side Images -->
-                    <div v-if="tour.gallery && tour.gallery.length > 0" class="flex flex-col gap-2 w-1/3">                        
+                    <div v-if="tour.gallery && tour.gallery.length > 0" class="flex flex-col w-1/3 gap-2">                        
                         <!-- Second gallery image or view more overlay -->
-                        <div class="flex-1 relative cursor-pointer" @click="openGalleryModal">
+                        <div class="relative flex-1 cursor-pointer" @click="openGalleryModal">
                             <img v-if="tour.gallery.length > 1" 
                                 :src="`/assets/${tour.gallery[0].image}`" 
                                 :alt="tour.name"
-                                class="w-full h-full rounded-r-3xl object-cover" loading="lazy"/>
-                            <div v-else class="w-full h-full rounded-br-3xl bg-gray-200 flex items-center justify-center">
+                                class="object-cover w-full h-full rounded-r-3xl" loading="lazy"/>
+                            <div v-else class="flex items-center justify-center w-full h-full bg-gray-200 rounded-br-3xl">
                                 <span class="text-gray-500">Tidak ada foto lain</span>
                             </div>
                             
                             <!-- View more overlay if there are more than 2 gallery images -->
                             <div v-if="tour.gallery.length > 2" 
-                                class="absolute inset-0 bg-black bg-opacity-50 rounded-r-3xl flex items-center justify-center">
-                                <div class="text-white text-center">
+                                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-r-3xl">
+                                <div class="text-center text-white">
                                     <div class="text-xl font-bold">+{{ tour.gallery.length - 1 }}</div>
                                     <div class="text-sm">Foto lainnya</div>
                                 </div>
@@ -102,7 +102,7 @@
                             Galeri Foto - {{ tour.name }}
                         </h3>
                         <button @click="closeGalleryModal" 
-                            class="text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg p-1">
+                            class="p-1 text-gray-400 rounded-lg hover:text-gray-600 hover:bg-gray-100">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
@@ -111,7 +111,7 @@
                     
                     <!-- Modal Content -->
                     <div class="p-4 max-h-[70vh] overflow-y-auto">
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                             <!-- Main image -->
                             <div class="relative cursor-pointer group">
                                 <img :src="`/assets/${tour.image.image}`" loading="lazy" :alt="tour.name"
@@ -137,19 +137,19 @@
                     <!-- left section -->
                     <section class="text-center md:float-left md:mx-auto md:mb-2 md:w-2/3">
                         <!-- hal.deskripsi -->
-                        <div class="relative mb-2 md:pr-2 rounded-lg sm:max-w-xl md:mx-auto md:max-w-full lg:max-w-screen-xl"
+                        <div class="relative mb-2 rounded-lg md:pr-2 sm:max-w-xl md:mx-auto md:max-w-full lg:max-w-screen-xl"
                             id="deskripsi">
                             <article
-                                class="container p-3 mt-4 text-sm  text-left bg-white dark:bg-dark rounded-xl shadow-lg dark:text-graylight font-inter text-primarydark md:text-lg">
+                                class="container p-3 mt-4 text-sm text-left bg-white shadow-lg dark:bg-dark rounded-xl dark:text-graylight font-inter text-primarydark md:text-lg">
                                 <h2
                                     class="text-xl font-semibold underline text-primarydark dark:text-graylight underline-offset-8">
                                     Informasi Singkat</h2>
-                                <div class="my-4 text-sm lg:text-base prose text-medium" aria-label="deskripsi-wisata"
+                                <div class="my-4 text-sm prose lg:text-base text-medium" aria-label="deskripsi-wisata"
                                     v-html="tour.fullDescription">
                                 </div>
                             </article>
-                            <div class="bg-white dark:bg-dark mt-3 rounded-xl shadow-lg px-3 py-1">
-                            <ol class="w-full my-4 font-inter text-left" role="list" aria-label="info-wisata">
+                            <div class="px-3 py-1 mt-3 bg-white shadow-lg dark:bg-dark rounded-xl">
+                            <ol class="w-full my-4 text-left font-inter" role="list" aria-label="info-wisata">
                                 <li>
                                     <div class="w-full p-2 border-l-2 border-secondarydark text-primarydark dark:text-secondary"
                                         role="alert">
@@ -158,7 +158,7 @@
                                             <h3 class="text-sm font-medium md:text-lg"
                                                 :title="`lokasi-wisata-${tour.name}`">Lokasi</h3>
                                         </div>
-                                        <p class="pt-2 text-sm font-normal capitalize text-dark dark:text-light"
+                                        <p class="pt-2 text-sm font-normal capitalize md:text-base text-dark dark:text-light"
                                             :aria-label="`lokasi-wisata-${tour.name}`">
                                             {{ tour.location }} - {{ tour.regency.name }}
                                         </p>
@@ -173,7 +173,7 @@
                                                 :title="`jam-operasional-wisata-${tour.name}`">Jam Operasional
                                             </h3>
                                         </div>
-                                        <p class="pt-2 text-sm text-dark dark:text-light"
+                                        <p class="pt-2 text-sm md:text-base text-dark dark:text-light"
                                             :aria-label="`jam-operasional-wisata-${tour.name}`">
                                             Pkl. {{ tour.operationalHours }} WITA
                                         </p>
@@ -200,7 +200,7 @@
                                                 :title="`fasilitas-wisata-${tour.name}`">Fasilitas</h3>
                                         </div>
                                         <div v-if="tour.facilities && tour.facilities.length > 0"
-                                            class="pt-2 text-sm text-dark dark:text-light"
+                                            class="pt-2 text-sm md:text-base text-dark dark:text-light"
                                             :aria-label="`fasilitas-wisata-${tour.name}`">
                                             <div v-for="facility in tour.facilities" :key="facility" class="">
                                                 <span class="mr-2 text-green-600">✓</span>
@@ -217,7 +217,7 @@
                     <!-- rigth section -->
                     <section class="w-full px-1 md:float-right md:w-1/3 font-inter">
                         
-                        <div class="overflow-x-auto mt-4 md:block bg-white dark:bg-dark rounded-xl shadow-lg px-3 py-1">
+                        <div class="px-3 py-1 mt-4 overflow-x-auto bg-white shadow-lg md:block dark:bg-dark rounded-xl">
                             <div class="container-maps">
                                  <h2
                                     class="text-xl font-semibold underline text-primarydark dark:text-graylight underline-offset-8">
@@ -225,7 +225,7 @@
                                 <div class="text-center rounded md:my-3">
                                     <iframe
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15704.261860759712!2d123.48309124540305!3d-10.256304037799584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c5699cfeb3f64c5%3A0xadf751838b8b304!2sPantai%20Baliana!5e0!3m2!1sid!2sid!4v1751873587520!5m2!1sid!2sid"
-                                        class="object-cover w-full rounded-md h-48" allowfullscreen
+                                        class="object-cover w-full h-48 rounded-md" allowfullscreen
                                         loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                                         aria-label="peta wisata" :aria-details="`peta wisata - ${tour.name}`"></iframe>
                                 </div>

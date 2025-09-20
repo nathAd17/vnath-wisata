@@ -4,7 +4,7 @@
       <div class="flex flex-wrap items-center justify-between py-4">
         <!-- Logo Section -->
         <router-link to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="/logo.png" class="h-12 md:h-16" alt="Logo Pesona Flobamora" />
+          <img src="/logo.png" class="h-12 md:h-16" alt="Logo Pesona Flobamora" loading="lazy"/>
           <span class="self-center text-xl font-medium md:text-2xl text-primarydark whitespace-nowrap dark:text-primarylight font-pacifico">
             Pesona Flobamora
           </span>

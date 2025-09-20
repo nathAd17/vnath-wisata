@@ -1,31 +1,31 @@
 <template>
     <section class="max-w-full mx-auto container-destination lg:max-w-screen-xl">
-        <div class="mb-8 mx-2 sm:mx-4">
+        <div class="mx-2 mb-8 sm:mx-4">
             <Breadcrumb />
         </div>
         <!-- Author Header -->
         <div v-if="user"
             class=" text-white bg-cover bg-center font-inter rounded-3xl py-16 bg-[url('/assets/destinasi/danau-kelimutu.webp')]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div
-                    class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8 bg-transparent backdrop-blur-md p-4 rounded-2xl">
+                    class="flex flex-col items-center p-4 space-y-6 bg-transparent md:flex-row md:space-y-0 md:space-x-8 backdrop-blur-md rounded-2xl">
                     <div class="flex-shrink-0">
                         <img :src="`https://ui-avatars.com/api/?name=${user.username}&rounded=true`"
-                            :alt="`${user.username}`" class="w-32 h-32 rounded-full border-4 border-white shadow-lg">
+                            :alt="`${user.username}`" class="w-32 h-32 border-4 border-white rounded-full shadow-lg">
                     </div>
                     <div class="text-center md:text-left">
-                        <h1 class="text-2xl font-bold mb-1">{{ user.full_name }}</h1>
-                        <p class="text-emerald-100 text-lg mb-4">{{ user.address }}</p>
-                        <p class="text-emerald-50 max-w-5xl leading-relaxed">
+                        <h1 class="mb-1 text-2xl font-bold">{{ user.full_name }}</h1>
+                        <p class="mb-4 text-lg text-emerald-100">{{ user.address }}</p>
+                        <p class="max-w-5xl leading-relaxed text-emerald-50">
                             {{ user.bio }}
                         </p>
-                        <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
+                        <div class="flex flex-wrap justify-center gap-4 mt-6 md:justify-start">
                             <div class="flex items-center">
-                                <i class="fas fa-calendar mr-2"></i>
+                                <i class="mr-2 fas fa-calendar"></i>
                                 <span>Bergabung sejak {{ formatYear(user.created_at) }}</span>
                             </div>
                             <div class="flex items-center">
-                                <i class="fas fa-edit mr-2"></i>
+                                <i class="mr-2 fas fa-edit"></i>
                                 <span>{{ authorPosts.length }} Artikel</span>
                             </div>
                         </div>
@@ -35,7 +35,7 @@
         </div>
 
         <!-- Posts Section -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="relative z-20 my-2">
                 
             <h1 v-if="user"
@@ -88,7 +88,7 @@
 
                             <!-- Dropdown menu -->
                             <div v-show="showFilterDropdown"
-                                class="absolute right-0 top-40 sm:top-28 md:top-26 z-10 p-4 mt-2 bg-white shadow w-max rounded-2xl dark:bg-graydark">
+                                class="absolute right-0 z-10 p-4 mt-2 bg-white shadow top-40 sm:top-28 md:top-26 w-max rounded-2xl dark:bg-graydark">
                                 <form @submit.prevent="applyFilter" class="font-inter">
 
                                     <div class="my-4 category">
@@ -138,12 +138,12 @@
 
             <!-- Active Filter Tags -->
             <div v-if="hasActiveFilters" class="px-4 mb-6">
-                <div class="flex flex-wrap gap-2 items-center">
-                    <span class="md:text-sm text-xs text-graydark dark:text-graylight font-medium">Filter aktif:</span>
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-medium md:text-sm text-graydark dark:text-graylight">Filter aktif:</span>
 
                     <!-- Type Filter Tag -->
                     <div v-if="selectedCategory"
-                        class="inline-flex items-center px-2 py-1 rounded-full text-xs md:text-sm bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                        class="inline-flex items-center px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full md:text-sm dark:bg-green-900 dark:text-green-200">
                         <span class="mr-2">{{ getTypeDisplayName(selectedCategory) }}</span>
                         <button @click="removeCategoryFilter"
                             class="ml-1 hover:bg-green-200 dark:hover:bg-green-800 rounded-full p-0.5 transition-colors duration-200"
@@ -157,7 +157,7 @@
                     </div>
                     <!-- Type Sort Tag -->
                     <div v-if="selectedSort"
-                        class="inline-flex items-center px-2 py-1 rounded-full text-xs md:text-sm bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                        class="inline-flex items-center px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full md:text-sm dark:bg-green-900 dark:text-green-200">
                         <span class="mr-2">{{ getTypeDisplayName(selectedSort) }}</span>
                         <button @click="removeSort"
                             class="ml-1 hover:bg-green-200 dark:hover:bg-green-800 rounded-full p-0.5 transition-colors duration-200"
@@ -172,7 +172,7 @@
 
                     <!-- Clear All Filters Button -->
                     <button @click="clearAllFilters"
-                        class="inline-flex items-center px-2 py-1 rounded-full text-xs md:text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                        class="inline-flex items-center px-2 py-1 text-xs text-gray-800 transition-colors duration-200 bg-gray-100 rounded-full md:text-sm hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
                         aria-label="Hapus semua filter">
                         <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
@@ -197,7 +197,7 @@
                         <div class="absolute top-0 z-10 flex items-center justify-between w-full px-4 mt-2">
                             <a :href="`/post/kategori=${post.category.slug}`"
                                 :aria-label="`kunjungi wisata${post.category.name}`"
-                                class="p-2 bg-green-200 text-sm font-medium capitalize transition duration-500 ease-in-out font-inter hover:contrast-100 hover:brightness-75 text-dark rounded-xl">{{ post.category.name
+                                class="p-2 text-sm font-medium capitalize transition duration-500 ease-in-out bg-green-200 font-inter hover:contrast-100 hover:brightness-75 text-dark rounded-xl">{{ post.category.name
                                 }}</a>
                             <a :href="`post/${post.slug}`" aria-label="kunjungi wisata"
                                 class="p-2 duration-300 ease-in-out border rounded-full border-light backdrop-blur-md group-hover:bg-primary">
@@ -217,6 +217,12 @@
                             </p>
                             <a :href="`post/${post.slug}`"
                                 class="text-base font-medium leading-7 tracking-tight capitalize font-rubik text-light"
+                                :aria-label="`kunjungi blog ${post.slug}`">
+                                {{post.title }}
+                            </a>
+                            <br>
+                            <a :href="`post/${post.slug}`"
+                                class="text-sm font-normal leading-7 tracking-tight capitalize font-rubik text-light"
                                 :aria-label="`kunjungi blog ${post.slug}`">
                                 {{truncateContent(post.content) }}
                             </a>

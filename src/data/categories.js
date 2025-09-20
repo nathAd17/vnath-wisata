@@ -8,8 +8,8 @@ export const categories = [
     },
     {
       id: 2,
-      name: "Goa & Perairan Darat",
-      slug: "goa-dan-perairan-darat",
+      name: "Gua & Perairan Darat",
+      slug: "gua-dan-perairan-darat",
       icon: "🏞️",
       description: "Destinasi wisata gua, air terjun, dan sumber air darat"
     },
