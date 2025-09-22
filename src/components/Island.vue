@@ -40,7 +40,7 @@
                     {{ island.name }}
                 </h3>
                 <div
-                    class="absolute inset-0 z-[9999] flex flex-col justify-center bg-primarydark bg-opacity-95 px-5 py-4 text-center opacity-0 transition-opacity duration-300 hover:opacity-100">
+                    class="absolute inset-0 z-[9999] flex flex-col justify-center bg-primarydark/80 bg-opacity-95 px-5 py-4 text-center opacity-0 transition-opacity duration-300 hover:opacity-100">
                     <h1 class="card-title mb-2 font-rubik text-lg font-medium capitalize text-light md:mb-4 lg:font-bold"
                         role="heading" aria-level="2" :aria-label="`pulau-${island.name}`">Pulau {{ island.name }}
                     </h1>
@@ -120,3 +120,25 @@ export default {
     }
 }
 </script>
+
+<style>
+
+.card:before {
+    content: '';
+    position: absolute;
+    z-index: 999;
+    top: -26px;
+    right: -26px;
+    background: linear-gradient(135deg, #25825e, rgb(46, 159, 105));
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 1s ease-out;
+}
+
+.card:hover:before {
+    transform: scale(28);
+}
+</style>
