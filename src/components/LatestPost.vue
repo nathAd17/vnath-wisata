@@ -126,8 +126,14 @@
             class="text-lg font-semibold leading-7 tracking-tight capitalize font-regular font-rubik text-light"
             :aria-label="`kunjungi blog ${post.slug}`"
           >
-            {{ limitText(post.title, 50) }}
+            {{ truncateContent(post.title, 75) }}
           </a>
+          <br>
+                        <a :href="`post/${post.slug}`"
+                            class="text-sm font-normal leading-7 tracking-tight capitalize font-rubik text-light"
+                            :aria-label="`kunjungi blog ${post.slug}`">
+                            {{ truncateContent(post.content, 125) }}
+                        </a>
         </main>
         
         <a
@@ -175,7 +181,7 @@ export default {
     }
   },
   methods: {
-    limitText(text, limit) {
+    truncateContent(text, limit) {
       if (text.length <= limit) return text;
       return text.substring(0, limit) + '...';
     },

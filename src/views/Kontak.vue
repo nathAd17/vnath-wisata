@@ -37,7 +37,7 @@
                     <div class="p-4 space-y-2">
                         <h2 class="text-base font-semibold text-dark dark:text-light">Info Background Gambar</h2>
                         <p>Wisata: Air Terjun Oenesu</p>
-                        <router-link to="/destinasi/air-terjun-oenesu"
+                        <a href="/destinasi/pulau-padar"
                             class="inline-flex items-center justify-center text-sm font-medium text-blue-600 hover:text-blue-700 hover:underline dark:text-blue-400">
                             Kunjungi
                             <svg class="w-3 h-3 ml-1 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -45,7 +45,7 @@
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2" d="m1 9 4-4-4-4" />
                             </svg>
-                        </router-link>
+                        </a>
                     </div>
 
                     <!-- Arrow -->

@@ -224,7 +224,7 @@
                                     Peta Lokasi Wisata</h2>
                                 <div class="text-center rounded md:my-3">
                                     <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15704.261860759712!2d123.48309124540305!3d-10.256304037799584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c5699cfeb3f64c5%3A0xadf751838b8b304!2sPantai%20Baliana!5e0!3m2!1sid!2sid!4v1751873587520!5m2!1sid!2sid"
+                                        :src="`${tour.srcMaps}`"
                                         class="object-cover w-full h-48 rounded-md" allowfullscreen
                                         loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                                         aria-label="peta wisata" :aria-details="`peta wisata - ${tour.name}`"></iframe>

@@ -4,6 +4,7 @@ export const tours = [
         name: "Pantai Baliana",
         slug: "pantai-baliana",
         location: "Desa Kuanheun, Kec. Kupang Barat",
+        srcMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15704.261842796423!2d123.493391!3d-10.2563044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c5699cfeb3f64c5%3A0xadf751838b8b304!2sPantai%20Baliana!5e0!3m2!1sid!2sid!4v1758537783932!5m2!1sid!2sid",
         operationalHours: "08.00 - 16.00",
         category: {
             name: "Perairan Laut",
@@ -33,6 +34,7 @@ export const tours = [
         name: "Gua Kristal",
         slug: "gua-kristal",
         location: "Desa Bolok, Kec. Kupang Barat",
+        srcMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.458373908733!2d123.50582309678956!3d-10.224566000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c569975d1eabc83%3A0x1646c77c11b0c043!2sGoa%20Kristal!5e0!3m2!1sid!2sid!4v1758537850620!5m2!1sid!2sid",
         operationalHours: "07.00 - 18.00",
         category: {
             name: "Gua & Perairan Darat",
@@ -62,6 +64,7 @@ export const tours = [
         name: "Air Terjun Oenesu",
         slug: "air-terjun-oenesu",
         location: "Desa Oenesu, Kec. Kupang Barat",
+        srcMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.9449424445525!2d123.56131994285528!3d-10.266020063770936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c569151b392940b%3A0x5869f2fa083b5714!2sAir%20Terjun%20Oenesu!5e0!3m2!1sid!2sid!4v1758537878435!5m2!1sid!2sid",
         operationalHours: "08.00 - 17.00",
         category: {
             name: "Air Terjun",
@@ -92,6 +95,7 @@ export const tours = [
         slug: "pantai-nihiwatu",
         location: "Desa Hobawawi, Kecamatan Wanukaka",
         operationalHours: "24 Jam",
+        srcMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7863.8415390218115!2d119.36077496193256!3d-9.772771661123814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c4afcdc01f97a73%3A0x54c747e3fc22ac63!2sNihiwatu%20Beach!5e0!3m2!1sid!2sid!4v1758537905269!5m2!1sid!2sid",
         category: {
             name: "Perairan Laut",
             slug: "perairan-laut"
@@ -120,6 +124,7 @@ export const tours = [
         name: "Pantai Oetune",
         slug: "pantai-oetune",
         location: "Desa Tuafanu, Kecamatan Kualin",
+        srcMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15708.572269762302!2d124.3867915880805!3d-10.169024238450152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c561b37daf7c2b3%3A0x8599d743775e45ec!2sPantai%20Oetune!5e0!3m2!1sid!2sid!4v1758537942347!5m2!1sid!2sid",
         operationalHours: "07.00 - 18.00",
         category: {
             name: "Perairan Laut",
@@ -149,6 +154,7 @@ export const tours = [
         name: "Danau Kelimutu",
         slug: "danau-kelimutu",
         location: "Kelimutu National Park, Kecamatan Detusoko",
+        srcMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15772.72905522094!2d121.81178728778681!3d-8.76891620993518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dad5db2c402cd93%3A0x80c10811c83a24cb!2sDanau%20Kelimutu!5e0!3m2!1sid!2sid!4v1758537966657!5m2!1sid!2sid",
         operationalHours: "06.00 - 17.00",
         category: {
             name: "Gua & Perairan Darat",
@@ -178,6 +184,7 @@ export const tours = [
         name: "Pulau Padar",
         slug: "pulau-padar",
         location: "Taman Nasional Komodo",
+        srcMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63108.85499971708!2d119.52844073518719!3d-8.66266483518578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2db4f84ff6cd01ab%3A0xf7e6fd33b692a898!2sPulau%20Padar!5e0!3m2!1sid!2sid!4v1758538007998!5m2!1sid!2sid",
         operationalHours: "24 Jam",
         category: {
             name: "Pegunungan",
@@ -207,6 +214,7 @@ export const tours = [
         name: "Desa Waerebo",
         slug: "desa-waerebo",
         location: "Satar Lenda, Manggarai",
+        srcMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.1801726470635!2d120.28160601043488!3d-8.769113191245832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2db36459b2e80e9d%3A0xce74c6b87dcb8a88!2sWaerebo%20Village!5e0!3m2!1sid!2sid!4v1758538038392!5m2!1sid!2sid",
         operationalHours: "24 Jam",
         category: {
             name: "Budaya",
@@ -236,6 +244,7 @@ export const tours = [
         name: "Bukit Tanarara",
         slug: "bukit-tanarara",
         location: "Kecamatan Tabundung, Sumba Timur",
+        srcMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125723.97354235558!2d120.1357963972656!3d-10.027240799999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c4c7102f0876975%3A0x569c7c627c1d0e10!2sTanarara%20Matawai%20La%20Pawu!5e0!3m2!1sid!2sid!4v1758538127300!5m2!1sid!2sid",
         operationalHours: "24 Jam",
         category: {
             name: "Pegunungan",
