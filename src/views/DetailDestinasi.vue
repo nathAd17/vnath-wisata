@@ -3,32 +3,6 @@
         <div class="mx-2 mb-8 sm:mx-4">
             <Breadcrumb />
         </div>
-        <!-- <nav class="flex" aria-label="Breadcrumb">
-            <ol class="inline-flex items-center space-x-1 font-inter md:space-x-2 rtl:space-x-reverse">
-                <li class="inline-flex items-center">
-                    <a href="/destinasi"
-                        class="inline-flex items-center text-sm font-semibold text-gray-700 hover:text-primaryhover dark:text-primarygray dark:hover:text-primary">
-                        <svg class="me-2.5 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
-                        </svg>
-                        Destinasi
-                    </a>
-                </li>
-                <li aria-current="page">
-                    <div class="flex items-center">
-                        <svg class="w-3 h-3 mx-1 text-primarygray dark:text-graydark rtl:rotate-180" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 9 4-4-4-4" />
-                        </svg>
-                        <span class="text-sm font-medium ms-1 text-grayhover dark:text-primarygray md:ms-2">Detail
-                            Destinasi</span>
-                    </div>
-                </li>
-            </ol>
-        </nav> -->
         <div v-if="tour" class="content">
             <header v-if="tour" class="max-w-xl mx-auto my-4 text-center">
                 <h2 class="inline-block p-2 mb-4 text-xs font-bold tracking-wider text-center uppercase rounded-full bg-primary font-poppins text-light"
@@ -90,6 +64,7 @@
                     </div>
                 </div>
             </section>
+
             <!-- Gallery Modal -->
             <div v-if="showGalleryModal" 
                 class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
@@ -113,25 +88,82 @@
                     <div class="p-4 max-h-[70vh] overflow-y-auto">
                         <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                             <!-- Main image -->
-                            <div class="relative cursor-pointer group">
+                            <div class="relative cursor-pointer group" @click="openFullscreen(`/assets/${tour.image.image}`, tour.name, -1)">
                                 <img :src="`/assets/${tour.image.image}`" loading="lazy" :alt="tour.name"
                                     class="object-cover w-full h-48 transition-transform rounded-lg group-hover:scale-105" />
-                                <div class="absolute inset-0 transition-opacity bg-black bg-opacity-0 rounded-lg group-hover:scale-105 group-hover:bg-opacity-20">
+                                <div class="absolute inset-0 flex items-center justify-center transition-opacity bg-black bg-opacity-0 rounded-lg group-hover:bg-opacity-20">
+                                    <svg class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path>
+                                    </svg>
                                 </div>
                             </div>
                             
                             <!-- Gallery images -->
                             <div v-for="(photo, index) in tour.gallery" :key="index"
-                                class="relative cursor-pointer group">
+                                class="relative cursor-pointer group" @click="openFullscreen(`/assets/${photo.image}`, tour.name, index)">
                                 <img :src="`/assets/${photo.image}`" loading="lazy" :alt="tour.name"
                                     class="object-cover w-full h-48 transition-transform rounded-lg group-hover:scale-105" />
-                                <div class="absolute inset-0 transition-opacity bg-black bg-opacity-0 rounded-lg group-hover:scale-105 group-hover:bg-opacity-20">
+                                <div class="absolute inset-0 flex items-center justify-center transition-opacity bg-black bg-opacity-0 rounded-lg group-hover:bg-opacity-20">
+                                    <svg class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Fullscreen Modal -->
+            <div v-if="showFullscreenModal" 
+                class="fixed inset-0 z-[90] flex items-center justify-center bg-black"
+                @click="closeFullscreen">
+                
+                <!-- Navigation arrows -->
+                <button v-if="allImages.length > 1" 
+                    @click.stop="previousImage"
+                    class="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-75 transition-opacity">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+
+                <button v-if="allImages.length > 1"
+                    @click.stop="nextImage" 
+                    class="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-75 transition-opacity">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+                <!-- Close button -->
+                <button @click="closeFullscreen" 
+                    class="absolute top-4 right-4 z-10 p-2 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-75 transition-opacity">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+
+                <!-- Image counter -->
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 px-4 py-2 rounded-full bg-black bg-opacity-50 text-white text-sm">
+                    {{ currentImageIndex + 1 }} / {{ allImages.length }}
+                </div>
+
+                <!-- Fullscreen image -->
+                <div class="relative w-full h-full flex items-center justify-center p-4" @click.stop>
+                    <img :src="currentFullscreenImage" 
+                         :alt="tour.name"
+                         class="max-w-full max-h-full object-contain cursor-zoom-out"
+                         @click="closeFullscreen" />
+                </div>
+
+                <!-- Image title -->
+                <div class="absolute top-4 left-4 z-10 px-4 py-2 rounded bg-black bg-opacity-50 text-white">
+                    <h4 class="font-semibold">{{ tour.name }}</h4>
+                    <p class="text-sm opacity-75">Foto {{ currentImageIndex + 1 }}</p>
+                </div>
+            </div>
+
             <section class="flex flex-col my-4">
                 <div class="flex flex-wrap md:block">
                     <!-- left section -->
@@ -179,18 +211,6 @@
                                         </p>
                                     </div>
                                 </li>
-                                <!-- <li>
-                            <div class="w-full p-2 my-2 border-l-2 border-secondarydark text-primarydark dark:text-secondary"
-                                role="alert">
-                                <div class="flex items-center justify-between">
-                                    <span class="sr-only">Wisata info</span>
-                                    <h3 class="text-sm font-medium md:text-lg" title="biaya-masuk-wisata-{{ $destinations->name }}">Biaya Masuk</h3>
-                                </div>
-                                <p class="pt-2 text-sm text-dark dark:text-light" aria-label="biaya-masuk-wisata-{{ $destinations->name }}">
-                                    {{ tour.entry_fee }}
-                                </p>
-                            </div>
-                        </li> -->
                                 <li>
                                     <div class="w-full p-2 border-l-2 border-secondarydark text-primarydark dark:text-secondary"
                                         role="alert">
@@ -245,7 +265,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { tours as toursData } from '../data/tours.js'
 import { categories } from '../data/categories.js'
@@ -259,6 +279,32 @@ export default {
         const route = useRoute()
         const tour = ref(null)
         const showGalleryModal = ref(false)
+        const showFullscreenModal = ref(false)
+        const currentImageIndex = ref(0)
+        const currentFullscreenImage = ref('')
+
+        // Computed property untuk menggabungkan semua gambar
+        const allImages = computed(() => {
+            if (!tour.value) return []
+            
+            const images = [
+                {
+                    src: `/assets/${tour.value.image.image}`,
+                    alt: tour.value.name
+                }
+            ]
+            
+            if (tour.value.gallery) {
+                tour.value.gallery.forEach(photo => {
+                    images.push({
+                        src: `/assets/${photo.image}`,
+                        alt: tour.value.name
+                    })
+                })
+            }
+            
+            return images
+        })
 
         const getTourDetail = () => {
             const slug = route.params.slug
@@ -291,29 +337,84 @@ export default {
             document.body.style.overflow = 'auto'
         }
 
-        const fullScreen = () => {
-            const img = document.getElementById('elImg')
-            if (img.requestFullscreen) {
-                img.requestFullscreen()
-            } else if (img.mozRequestFullScreen) {
-                img.mozRequestFullScreen()
-            } else if (img.webkitRequestFullscreen) {
-                img.webkitRequestFullscreen()
-            } else if (img.msRequestFullscreen) {
-                img.msRequestFullscreen()
+        const openFullscreen = (imageSrc, alt, index) => {
+            // Jika index adalah -1, berarti gambar utama
+            if (index === -1) {
+                currentImageIndex.value = 0
+            } else {
+                currentImageIndex.value = index + 1 // +1 karena gambar utama adalah index 0
+            }
+            
+            currentFullscreenImage.value = imageSrc
+            showGalleryModal.value = false
+            showFullscreenModal.value = true
+            document.body.style.overflow = 'hidden'
+        }
+
+        const closeFullscreen = () => {
+            showFullscreenModal.value = false
+            showGalleryModal.value = true
+            document.body.style.overflow = 'auto'
+        }
+
+        const nextImage = () => {
+            if (currentImageIndex.value < allImages.value.length - 1) {
+                currentImageIndex.value++
+            } else {
+                currentImageIndex.value = 0
+            }
+            currentFullscreenImage.value = allImages.value[currentImageIndex.value].src
+        }
+
+        const previousImage = () => {
+            if (currentImageIndex.value > 0) {
+                currentImageIndex.value--
+            } else {
+                currentImageIndex.value = allImages.value.length - 1
+            }
+            currentFullscreenImage.value = allImages.value[currentImageIndex.value].src
+        }
+
+        // Keyboard navigation
+        const handleKeydown = (event) => {
+            if (showFullscreenModal.value) {
+                switch (event.key) {
+                    case 'Escape':
+                        closeFullscreen()
+                        break
+                    case 'ArrowLeft':
+                        previousImage()
+                        break
+                    case 'ArrowRight':
+                        nextImage()
+                        break
+                }
             }
         }
 
         onMounted(() => {
             getTourDetail()
+            document.addEventListener('keydown', handleKeydown)
+        })
+
+        // Cleanup event listener
+        onUnmounted(() => {
+            document.removeEventListener('keydown', handleKeydown)
         })
 
         return {
             tour,
             showGalleryModal,
+            showFullscreenModal,
+            currentImageIndex,
+            currentFullscreenImage,
+            allImages,
             openGalleryModal,
             closeGalleryModal,
-            fullScreen
+            openFullscreen,
+            closeFullscreen,
+            nextImage,
+            previousImage
         }
     },
     components: {
