@@ -20,10 +20,10 @@
             </p>
         </div>
 
-        <div class="flex flex-col gap-10 px-4 py-10 overflow-x-hidden md:px-10">
+        <div class="flex flex-col gap-10 px-4 py-4 md:py-10 overflow-x-hidden md:px-10">
             <div class="flex flex-col justify-center gap-5 duration-500 md:flex-row lg:gap-10">
                 <section
-                    class="flex flex-col items-start justify-center flex-1 gap-2 py-5 text-sm text-left lg:gap-7 lg:text-base"
+                    class="flex flex-col items-start justify-center flex-1 gap-2 py-2 md:py-5 text-sm text-left lg:gap-7 lg:text-base"
                     style="opacity: 1; transform: none;">
                     <p class="leading-7 font-inter dark:text-graylight" aria-label="tentang flobamora">Flobamora,
                         singkatan

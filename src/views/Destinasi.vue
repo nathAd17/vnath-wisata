@@ -317,32 +317,37 @@ export default {
     },
     computed: {
         filteredDestinations() {
-            let filtered = this.tours;
+            let filtered = [...this.tours]; // Create a copy to avoid mutation
 
             // Search filter
-            if (this.searchKeyword) {
+            if (this.searchKeyword && this.searchKeyword.trim()) {
+                const keyword = this.searchKeyword.toLowerCase().trim();
                 filtered = filtered.filter(tour =>
-                    tour.name.toLowerCase().includes(this.searchKeyword.toLowerCase()) ||
-                    tour.description.toLowerCase().includes(this.searchKeyword.toLowerCase())
+                    tour.name.toLowerCase().includes(keyword) ||
+                    tour.description.toLowerCase().includes(keyword) ||
+                    tour.regency.name.toLowerCase().includes(keyword)
                 );
             }
 
             // Regency filter
-            if (this.selectedRegency) {
-                filtered = filtered.filter(tour => tour.regency.name === this.selectedRegency);
+            if (this.selectedRegency && this.selectedRegency.trim()) {
+                filtered = filtered.filter(tour => 
+                    tour.regency.name.toLowerCase() === this.selectedRegency.toLowerCase()
+                );
             }
 
-            // Type filter
-            if (this.selectedType) {
-                filtered = filtered.filter(tour => {
-                    const category = this.categories.find(cat => cat.slug === tour.category.slug);
-                    return category && category.slug === this.selectedType;
-                });
+            // Type filter - Fixed logic
+            if (this.selectedType && this.selectedType.trim()) {
+                filtered = filtered.filter(tour => 
+                    tour.category.slug === this.selectedType
+                );
             }
 
             // Island filter
-            if (this.selectedIsland) {
-                filtered = filtered.filter(tour => tour.island === this.selectedIsland);
+            if (this.selectedIsland && this.selectedIsland.trim()) {
+                filtered = filtered.filter(tour => 
+                    tour.island && tour.island.toLowerCase() === this.selectedIsland.toLowerCase()
+                );
             }
 
             return filtered;
@@ -356,18 +361,49 @@ export default {
             return this.filteredDestinations.slice(start, end);
         },
         hasActiveFilters() {
-            return this.searchKeyword || this.selectedRegency || this.selectedType || this.selectedIsland;
+            return !!(this.searchKeyword?.trim() || 
+                     this.selectedRegency?.trim() || 
+                     this.selectedType?.trim() || 
+                     this.selectedIsland?.trim());
+        }
+    },
+    watch: {
+        // Watch for changes in filtered results and reset page if needed
+        filteredDestinations(newVal, oldVal) {
+            if (newVal.length !== oldVal.length && this.currentPage > this.totalPages) {
+                this.currentPage = Math.max(1, this.totalPages);
+            }
+        },
+        // Watch individual filter changes
+        selectedRegency() {
+            this.resetToFirstPage();
+        },
+        selectedType() {
+            this.resetToFirstPage();
+        },
+        selectedIsland() {
+            this.resetToFirstPage();
         }
     },
     methods: {
         searchDestinations() {
-            this.currentPage = 1;
+            this.resetToFirstPage();
+        },
+        resetToFirstPage() {
+            if (this.currentPage !== 1) {
+                this.currentPage = 1;
+            }
         },
         toggleFilterDropdown() {
             this.showFilterDropdown = !this.showFilterDropdown;
         },
+        onFilterChange() {
+            // This method is called when filter dropdowns change
+            // Reset to first page when filter changes
+            this.resetToFirstPage();
+        },
         applyFilter() {
-            this.currentPage = 1;
+            this.resetToFirstPage();
             this.showFilterDropdown = false;
         },
         resetFilter() {
@@ -376,19 +412,20 @@ export default {
             this.selectedIsland = '';
             this.searchKeyword = '';
             this.currentPage = 1;
+            this.showFilterDropdown = false;
         },
         // Methods for removing individual filters
         removeRegencyFilter() {
             this.selectedRegency = '';
-            this.currentPage = 1;
+            this.resetToFirstPage();
         },
         removeTypeFilter() {
             this.selectedType = '';
-            this.currentPage = 1;
+            this.resetToFirstPage();
         },
         removeIslandFilter() {
             this.selectedIsland = '';
-            this.currentPage = 1;
+            this.resetToFirstPage();
         },
         clearAllFilters() {
             this.selectedRegency = '';

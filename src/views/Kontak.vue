@@ -258,7 +258,7 @@ const submitForm = async () => {
       timeStyle: "medium",
     });
 
-    const res = await fetch("https://api.sheetmonkey.io/form/q892fcascpZMGbr5FPiCaZ", {
+    const res = await fetch(import.meta.env.VITE_SHEETMONKEY_URL, {
       method: "POST",
       body: JSON.stringify({
         Name: form.value.name,

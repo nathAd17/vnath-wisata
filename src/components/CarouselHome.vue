@@ -32,7 +32,7 @@
                 </div>
             </div>
 
-            <div class="absolute mx-auto text-center typing-box md:left-4">
+            <div class="absolute mx-auto mt-2 text-center typing-box md:left-4">
                 <p class="font-bold line animation-typing font-inter text-light">PESONA FLOBAMORA</p>
             </div>
 
@@ -165,8 +165,8 @@ export default {
 
     .typing-box {
         position: absolute;
-        top: 0;
-        margin: 4px 0;
+        top: 10px;
+        margin: 4px 6px;
     }
 }
 

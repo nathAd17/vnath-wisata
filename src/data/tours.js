@@ -67,8 +67,8 @@ export const tours = [
         srcMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.9449424445525!2d123.56131994285528!3d-10.266020063770936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c569151b392940b%3A0x5869f2fa083b5714!2sAir%20Terjun%20Oenesu!5e0!3m2!1sid!2sid!4v1758537878435!5m2!1sid!2sid",
         operationalHours: "08.00 - 17.00",
         category: {
-            name: "Air Terjun",
-            slug: "air-terjun"
+            name: "Gua & Perairan Darat",
+            slug: "gua-dan-perairan-darat"
         },
         image: {
             image: "destinasi/air-terjun-oenesu.webp",
