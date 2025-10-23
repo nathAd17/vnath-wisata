@@ -92,7 +92,7 @@
           <a
             :href="`/post/${post.slug}`"
             :aria-label="`kunjungi blog ${post.slug}`"
-            class="p-2 duration-300 ease-in-out border rounded-full border-light backdrop-blur-md group-hover:bg-primary"
+            class="p-2 duration-100 ease-in-out border rounded-full border-light backdrop-blur-md group-hover:bg-primary group-hover:border-0"
           >
             <svg
               class="w-5 h-5 duration-300 ease-linear rotate-45 text-light group-hover:rotate-90"
