@@ -23,15 +23,15 @@
                         </defs>
                         <rect fill="url(#7b568941-9ed0-4f49-85a0-5e21ca6c7ad6)" width="52" height="24"></rect>
                     </svg>
-                    <span class="relative">"Jelajahi </span>
+                    <span class="relative">Jelajahi </span>
                 </span> surga tersembunyi di
                 <span v-if="selectedIsland" class="capitalize" aria-hidden="true">Pulau {{ selectedIsland }} -</span>
-                Nusa Tenggara Timur!"
+                Nusa Tenggara Timur!
             </h2>
             <p class="text-base font-normal font-inter text-graydark dark:text-graylight md:text-lg" title="sub-judul"
-                role="heading" aria-level="2"> "Terbenamlah dalam pesona Nusa Tenggara
+                role="heading" aria-level="2">Terbenamlah dalam pesona Nusa Tenggara
                 Timur
-                yang Menggoda Anda dengan Destinasi Wisata yang Memukau dan Kaya Budaya!" </p>
+                yang Menggoda Anda dengan Destinasi Wisata yang Memukau dan Kaya Budaya! </p>
         </div>
 
         <!-- Search and Filter Section -->
@@ -129,56 +129,64 @@
             </div>
         </div>
 
-         <!-- Active Filter Tags -->
+        <!-- Active Filter Tags -->
         <div v-if="hasActiveFilters" class="px-4 mb-6">
             <div class="flex flex-wrap items-center gap-2">
                 <span class="text-xs font-medium md:text-sm text-graydark dark:text-graylight">Filter aktif:</span>
-                
+
                 <!-- Regency Filter Tag -->
-                <div v-if="selectedRegency" 
-                     class="inline-flex items-center px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded-full md:text-sm dark:bg-blue-900 dark:text-blue-200">
+                <div v-if="selectedRegency"
+                    class="inline-flex items-center px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded-full md:text-sm dark:bg-blue-900 dark:text-blue-200">
                     <span class="mr-2">{{ selectedRegency }}</span>
-                    <button @click="removeRegencyFilter" 
-                            class="ml-1 hover:bg-blue-200 dark:hover:bg-blue-800 rounded-full p-0.5 transition-colors duration-200"
-                            aria-label="Hapus filter kabupaten">
+                    <button @click="removeRegencyFilter"
+                        class="ml-1 hover:bg-blue-200 dark:hover:bg-blue-800 rounded-full p-0.5 transition-colors duration-200"
+                        aria-label="Hapus filter kabupaten">
                         <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
                         </svg>
                     </button>
                 </div>
 
                 <!-- Type Filter Tag -->
-                <div v-if="selectedType" 
-                     class="inline-flex items-center px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full md:text-sm dark:bg-green-900 dark:text-green-200">
+                <div v-if="selectedType"
+                    class="inline-flex items-center px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full md:text-sm dark:bg-green-900 dark:text-green-200">
                     <span class="mr-2">{{ getTypeDisplayName(selectedType) }}</span>
-                    <button @click="removeTypeFilter" 
-                            class="ml-1 hover:bg-green-200 dark:hover:bg-green-800 rounded-full p-0.5 transition-colors duration-200"
-                            aria-label="Hapus filter jenis wisata">
+                    <button @click="removeTypeFilter"
+                        class="ml-1 hover:bg-green-200 dark:hover:bg-green-800 rounded-full p-0.5 transition-colors duration-200"
+                        aria-label="Hapus filter jenis wisata">
                         <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
                         </svg>
                     </button>
                 </div>
 
                 <!-- Island Filter Tag (if you have selectedIsland) -->
-                <div v-if="selectedIsland" 
-                     class="inline-flex items-center px-2 py-1 text-xs text-purple-800 bg-purple-100 rounded-full md:text-sm dark:bg-purple-900 dark:text-purple-200">
+                <div v-if="selectedIsland"
+                    class="inline-flex items-center px-2 py-1 text-xs text-purple-800 bg-purple-100 rounded-full md:text-sm dark:bg-purple-900 dark:text-purple-200">
                     <span class="mr-2">{{ selectedIsland }}</span>
-                    <button @click="removeIslandFilter" 
-                            class="ml-1 hover:bg-purple-200 dark:hover:bg-purple-800 rounded-full p-0.5 transition-colors duration-200"
-                            aria-label="Hapus filter pulau">
+                    <button @click="removeIslandFilter"
+                        class="ml-1 hover:bg-purple-200 dark:hover:bg-purple-800 rounded-full p-0.5 transition-colors duration-200"
+                        aria-label="Hapus filter pulau">
                         <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
                         </svg>
                     </button>
                 </div>
 
                 <!-- Clear All Filters Button -->
-                <button @click="clearAllFilters" 
-                        class="inline-flex items-center px-2 py-1 text-xs text-gray-800 transition-colors duration-200 bg-gray-100 rounded-full md:text-sm hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
-                        aria-label="Hapus semua filter">
+                <button @click="clearAllFilters"
+                    class="inline-flex items-center px-2 py-1 text-xs text-gray-800 transition-colors duration-200 bg-gray-100 rounded-full md:text-sm hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
+                    aria-label="Hapus semua filter">
                     <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
                     </svg>
                     Hapus Semua
                 </button>
@@ -222,11 +230,10 @@
                             </svg>
                         </a>
                     </div>
-                    <main class="z-10 p-1 m-2 mx-auto text-center text-light hover:text-primaryhover">
+                    <main class="z-10 p-1 m-2 mx-auto text-light hover:text-primaryhover">
                         <a :href="`destinasi/${tour.slug}`" aria-label="lokasi wisata"
-                            class="text-lg font-semibold leading-7 tracking-tight capitalize font-regular font-rubik">{{
-                            tour.name }}
-                            - {{ tour.regency.name }}
+                            class="text-lg font-semibold leading-7 tracking-tight capitalize font-regular font-rubik">
+                            {{ tour.name }} - {{ tour.regency.name }}
                         </a>
                     </main>
                     <a :href="`destinasi/${tour.slug}`" :aria-label="`kunjungi wisata${tour.category.name}`"
@@ -275,22 +282,17 @@
                 </button>
             </div>
         </div>
-        <GoToTop 
-      :threshold="300"
-      variant="primary"
-      :show-progress="true"
-      position="bottom-right"
-    />
+        <GoToTop :threshold="300" variant="primary" :show-progress="true" position="bottom-right" />
     </div>
 </template>
 
 <script>
-import { tours } from '../data/tours';
-import { islands } from '../data/islands';
-import { categories } from '../data/categories';
-import { regencies } from '../data/regencies';
 import Breadcrumb from '../components/Breadcrumb.vue';
 import GoToTop from '../components/GoToTop.vue';
+import { categories } from '../data/categories';
+import { islands } from '../data/islands';
+import { regencies } from '../data/regencies';
+import { tours } from '../data/tours';
 
 export default {
     components: {
@@ -331,21 +333,21 @@ export default {
 
             // Regency filter
             if (this.selectedRegency && this.selectedRegency.trim()) {
-                filtered = filtered.filter(tour => 
+                filtered = filtered.filter(tour =>
                     tour.regency.name.toLowerCase() === this.selectedRegency.toLowerCase()
                 );
             }
 
             // Type filter - Fixed logic
             if (this.selectedType && this.selectedType.trim()) {
-                filtered = filtered.filter(tour => 
+                filtered = filtered.filter(tour =>
                     tour.category.slug === this.selectedType
                 );
             }
 
             // Island filter
             if (this.selectedIsland && this.selectedIsland.trim()) {
-                filtered = filtered.filter(tour => 
+                filtered = filtered.filter(tour =>
                     tour.island && tour.island.toLowerCase() === this.selectedIsland.toLowerCase()
                 );
             }
@@ -361,10 +363,10 @@ export default {
             return this.filteredDestinations.slice(start, end);
         },
         hasActiveFilters() {
-            return !!(this.searchKeyword?.trim() || 
-                     this.selectedRegency?.trim() || 
-                     this.selectedType?.trim() || 
-                     this.selectedIsland?.trim());
+            return !!(this.searchKeyword?.trim() ||
+                this.selectedRegency?.trim() ||
+                this.selectedType?.trim() ||
+                this.selectedIsland?.trim());
         }
     },
     watch: {

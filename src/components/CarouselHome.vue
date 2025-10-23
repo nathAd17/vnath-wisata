@@ -1,8 +1,8 @@
 <template>
     <section class="max-w-full mx-auto container-home lg:max-w-screen-xl">
         <div
-            class="home relative mx-auto mt-4 flex w-full flex-col items-center justify-center rounded-[3rem] bg-secondary py-32 shadow-2xl lg:py-[260px]">
-            <img v-for="(tour, index) in topFiveRandomTours" :key="index" :src="`/assets/${tour.image.image}`"
+            class="home relative mx-auto mt-4 flex w-full flex-col items-center justify-center rounded-[3rem] bg-secondary py-32 shadow-2xl lg:py-[260px] ">
+             <img v-for="(tour, index) in topFiveRandomTours" :key="index" :src="`/assets/${tour.image.image}`"
                 :alt="`gambar wisata ${tour.name}`" class="img-slide rounded-[3rem] h-screen" loading="lazy"
                 :class="{ active: index === currentSlide }" />
 
@@ -17,7 +17,7 @@
                     </h1>
                     <a :href="`https://www.google.com/maps/place/${tour.location} - ${tour.regency.name}`"
                         class="block my-4 text-base font-medium text-white capitalize font-inter hover:text-lighthover md:font-semibold">
-                        {{ tour.location }} - Kab.{{ tour.regency.name }}
+                        {{ tour.location }} - Kab. {{ tour.regency.name }}
                     </a>
                     <a :href="`/destinasi/${tour.slug}`"
                         class="relative z-10 inline-flex items-center justify-center gap-2 px-2 py-1 mx-auto mt-2 overflow-hidden text-base bg-transparent border-2 rounded-full cursor-pointer group isolation-auto border-light font-inter text-light backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-primary before:transition-all before:duration-700 hover:text-light before:hover:left-0 before:hover:w-full before:hover:scale-150 before:hover:duration-700 md:px-4 md:py-2 md:text-lg lg:font-semibold"
@@ -32,6 +32,8 @@
                 </div>
             </div>
 
+             <div class="absolute inset-0 rounded-[3rem]" style="background-image:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5));"></div>
+
             <div class="absolute mx-auto mt-2 text-center typing-box md:left-4">
                 <p class="font-bold line animation-typing font-inter text-light">PESONA FLOBAMORA</p>
             </div>
@@ -39,7 +41,7 @@
             <div class="slider-navigation">
                 <div class="flex items-center justify-start gap-2 my-4">
                     <button @click="prevSlide"
-                    class="p-2 duration-300 ease-in-out bg-transparent border rounded-full nav-arrow prev border-dark text-cyan-500 backdrop-blur-3xl hover:bg-light hover:text-dark dark:border-light dark:hover:bg-dark dark:hover:text-light"
+                    class="p-2 duration-300 ease-in-out  bg-white/20 rounded-full nav-arrow prev  text-cyan-500 backdrop-blur-3xl hover:bg-light hover:text-dark dark:border-light dark:hover:bg-dark dark:hover:text-light"
                     aria-label="previous">
                     <svg class="w-4 h-4 rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 14 10">
@@ -48,7 +50,7 @@
                     </svg>
                 </button>
                 <button @click="nextSlide"
-                    class="p-2 duration-300 ease-in-out bg-transparent border rounded-full nav-arrow next border-dark text-cyan-500 backdrop-blur-3xl hover:bg-light hover:text-dark dark:border-light dark:hover:bg-dark dark:hover:text-light"
+                    class="p-2 duration-300 ease-in-out  bg-white/20 rounded-full nav-arrow next  text-cyan-500 backdrop-blur-3xl hover:bg-light hover:text-dark dark:border-light dark:hover:bg-dark dark:hover:text-light"
                     aria-label="next">
                     <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 14 10">
@@ -59,7 +61,7 @@
                 </div>
             </div>
 
-            <div class="dot-nav absolute right-2 z-[888] m-auto mt-12 flex flex-col gap-2">
+            <div class="dot-nav absolute right-2 z-[888] m-auto mt-12 flex flex-col gap-3">
                 <div v-for="(tour, index) in topFiveRandomTours" :key="'dot-' + index" class="nav-btn"
                     :class="{ active: index === currentSlide }" @click="goToSlide(index)"></div>
             </div>
@@ -269,9 +271,9 @@ export default {
 
 @media (min-width: 768px) {
     .dot-nav .nav-btn {
-        width: 12px;
-        height: 12px;
-        background: #fff;
+        width: 8px;
+        height: 8px;
+        background: #ffffff83;
         border-radius: 50%;
         cursor: pointer;
         box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
